@@ -1,0 +1,36 @@
+// Responsive Mixin Mobile First
+// @include min(md);
+@mixin min($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$value: map-get($breakpoints, $breakpoint);
+
+		@media (min-width: $value) {
+			@content;
+		}
+	}
+
+	// @warn "Unknown `#{$breakpoint}` in $breakpoints";
+}
+
+// Responsive Mixin Desktop First
+// @include max(md);
+@mixin max($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$value: map-get($breakpoints, $breakpoint);
+
+		@media (max-width: $value) {
+			@content;
+		}
+	}
+
+	// @warn "Unknown `#{$breakpoint}` in $breakpoints";
+}
+
+// Mobile Padding
+@mixin mobilepadding($padding-mobile: 24) {
+	@include max(wrap) {
+		padding-left: rem($padding-mobile);
+		padding-right: rem($padding-mobile);
+	}
+}
+

@@ -1,0 +1,68 @@
+.mobileNav {
+  background-color: var(--black);
+  background-image: url(/assets/grunge-white.png);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  // min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(4rem);
+  transition: .2s all ease-in-out;
+
+  @include min(lg) {
+    display: none;
+  }
+
+  &.active {
+    z-index: 99;
+    transform:translateY(0);
+    opacity: 1;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding-mobile);
+  }
+
+  &__logo {
+    img {
+      width: 5rem;
+      height: auto;
+    }
+  }
+
+  &__close {
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: .125rem solid currentColor;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  &__menu {
+    text-align: right;
+    list-style-type: none;
+    padding-right: 2rem;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 0;
+    padding-bottom: 2rem;
+
+    a {
+      text-decoration: none;
+      font-family: var(--font-condensed);
+      text-transform: uppercase;
+    }
+  }
+}

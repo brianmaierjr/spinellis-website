@@ -1,0 +1,67 @@
+:root {
+	// Colors
+	--black: #161616;
+	--charcoal: #241F1C;
+	--red: #B72F2F;
+	--red-dark: #7E1212; 
+	--white: white; 
+
+	// Fonts
+	--font-condensed: "Barlow Condensed", sans-serif;
+	--font-normal: "Barlow", sans-serif;
+
+	// Font Scale
+	--font-size-1: clamp(12.8px, 0.31vw + 11.57px, 16px);
+	--font-size-2: clamp(16px, 0.38vw + 14.46px, 20px);
+	--font-size-3: clamp(20px, 0.48vw + 18.08px, 25px);
+	--font-size-4: clamp(25px, 0.6vw + 22.6px, 31.25px);
+	--font-size-5: clamp(31.25px, 0.75vw + 28.25px, 39.06px);
+	--font-size-6: clamp(39.06px, 0.94vw + 35.31px, 48.83px);
+	--font-size-7: clamp(48.83px, 1.17vw + 44.13px, 61.04px);
+	--font-size-8: clamp(61.04px, 1.47vw + 55.17px, 76.29px);
+	--font-size-9: clamp(50.21px, 1.83vw + 68.96px, 95.37px);	
+
+	// Line Height
+  --heading-line-height: 1.1;
+  --body-line-height: 1.5;
+
+  // Spacing
+  --space-unit:  1rem;
+  --space-xxxxs: calc(0.125 * var(--space-unit)); 
+  --space-xxxs:  calc(0.25 * var(--space-unit));
+  --space-xxs:   calc(0.375 * var(--space-unit));
+  --space-xs:    calc(0.5 * var(--space-unit));
+  --space-sm:    calc(0.75 * var(--space-unit));
+  --space-md:    calc(1.25 * var(--space-unit));
+  --space-lg:    calc(2 * var(--space-unit));
+  --space-xl:    calc(3.25 * var(--space-unit));
+  --space-xxl:   calc(5.25 * var(--space-unit));
+  --space-xxxl:  calc(8.5 * var(--space-unit));
+  --space-xxxxl: calc(13.75 * var(--space-unit));
+  --component-padding: var(--space-md);
+
+	// Breakpoints
+	--breakpoint-xs: 320px;
+	--breakpoint-sm: 480px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1090px;
+	--breakpoint-xl: 1240px;
+	--breakpoint-xxl: 1440px;
+
+	// Padding
+	--padding-mobile: 2rem; 
+	
+	// Animation
+	--transition: all ease-in-out .2s;
+
+}
+
+// Breakpoints Map
+$breakpoints: ( 
+	"xs": 320px,
+	"sm": 480px,
+	"md": 768px,
+	"lg": 1090px,
+	"xl": 1240px,
+	"xxl": 1440px,
+);

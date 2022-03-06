@@ -1,0 +1,15 @@
+@keyframes neon {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 1vw var(--red)) drop-shadow(0 0 3vw var(--red)), drop-shadow(0 0 10vw var(--red)) drop-shadow(0 0 10vw var(--red)) drop-shadow(0 0 .4vw #FED128) drop-shadow(.5vw .5vw .1vw #806914);
+    color: #FED128;
+  }
+  50% {
+    filter: drop-shadow(0 0 .5vw var(--red-dark)) drop-shadow(0 0 1.5vw var(--red-dark)) drop-shadow(0 0 5vw var(--red-dark)) drop-shadow(0 0 5vw var(--red-dark)) drop-shadow(0 0 .2vw var(--red-dark)) drop-shadow(.5vw .5vw .1vw #40340A);
+    color: #806914;
+  }
+}
+
+.neon {  
+  // animation: neon 1s ease infinite;
+}

@@ -1,0 +1,147 @@
+.siteHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  @include min(lg) {
+    padding: 2rem;
+  }
+
+  &__logo {
+    @include min(lg) {
+      margin-right: 1rem;
+    }
+
+    @include min(xxl) {
+      margin-right: 8rem;
+    }
+  }
+
+  &__mobileOrderBtn {
+    width: 100%;
+    
+    @include min(lg) {
+      display: none;
+    }    
+  }
+
+  &__wrapper {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+
+  &__mobileNavTrigger {
+    margin-bottom: 0;
+
+    @include min(lg) {
+      display: none;
+    }
+  }
+
+  .btnGroup {
+    display: none;
+
+    @include min(lg) {
+      display: flex;
+      justify-content: flex-end;
+      flex: auto;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
+
+  &__mainNav {
+    display: none;
+
+    @include min(lg) {
+      display: flex;
+    }
+  
+    ul {
+      display: flex;
+  
+      li {
+        text-transform: uppercase;
+        margin-right: 2rem;
+        position: relative;
+  
+        &:hover,
+        &:focus,
+        &:focus-within {
+          .sub-nav {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+          }
+        }
+  
+        a {
+          text-decoration: none;
+
+          @include min(lg) {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+          }
+
+          &:after {
+            content: attr(data-replace);
+            position: absolute;
+            width: 100%;
+            left: 0;
+            height: 100%;
+            top: 0;
+            transform-origin: 100% 50%;
+            transform: translate3d(0, 200%, 0);
+            transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+            color: var(--red);            
+          }
+        }
+
+        a:hover::after,
+        a:focus::after,
+        a:focus-within::after {
+          transform: translate3d(0, 0, 0);
+        }
+    
+        a span {
+          display: inline-block;
+          transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+    
+        a:hover span,
+        a:focus span,
+        a:focus-within span {
+          transform: translate3d(0, -200%, 0);
+        }
+      }
+    }
+  }
+
+  &__subNav {
+    flex-direction: column;
+    /* display: none; */
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transform: translateY(2rem);
+    padding-top: .5rem;
+    transition: .2s all ease-in-out;
+  }
+}
+

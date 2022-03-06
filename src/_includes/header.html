@@ -1,0 +1,49 @@
+<header class="siteHeader">
+    <a class="siteHeader__mobileOrderBtn btn" herf="https://order.spinellispizzeria.com/" target="_blank">
+      Order Online
+    </a>
+  <div class="siteHeader__wrapper">
+
+    <a class="siteHeader__logo" href="/">
+      <img src="{{ 'assets/img/logo.svg' | url }}" alt="Spinellis Pizeria">
+    </a>
+
+    <button class="siteHeader__mobileNavTrigger btn btn--outline">
+      Menu
+    </button>
+
+    <nav class="siteHeader__mainNav" aria-label="Main Navigation">
+      <ul>
+        <li class="siteHeader__mainNavItem">
+          <a class="main-nav__link" href="/locations/" data-replace="Locations"><span>Locations</span></a>
+        </li>
+        <li class="siteHeader__mainNavItem">
+          <a class="main-nav__link" href="/menu/" data-replace="Menu"><span>Menu</span></a>
+        </li>
+        <li class="siteHeader__mainNavItem">
+          <a class="main-nav__link" href="/about/" data-replace="About"><span>About</span></a>
+        </li>
+        <li class="siteHeader__mainNavItem siteHeader__mainNavItem--hasChildren">
+          <a class="siteHeader__mainNavLink" href="#" data-replace="More +"><span>More +</span></a>
+          <ul class="siteHeader__subNav">
+            <li><a href="/media/">Media</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="btnGroup">
+      <a class="btn btn--outline" href="https://spinellispizza.bigcartel.com/" target="_blank">
+        Shop Merch
+      </a>
+      <a class="btn" href="https://order.spinellispizzeria.com/" target="_blank">
+        Order Online
+      </a>
+    </div>
+
+  </div>
+
+  {% include 'mobile-nav.html' %}
+
+</header>

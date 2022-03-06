@@ -1,0 +1,13 @@
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > *:last-child {
+    margin-right: 0;
+  }
+  
+  &--justifyLeft {
+    justify-content: flex-start;
+  }
+}
