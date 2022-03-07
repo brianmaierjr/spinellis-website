@@ -1,24 +1,26 @@
-<section aria-label="Locations" class="locations grunge grunge--light">
-  <div class="grunge__wrapper">
-    <div class="text-wrapper">
+<section aria-label="Locations" class="locations grungeSection">
+  <div class="wrapper">
+    <div class="grungeSection__content">
       <h2 class="color-red h1">Our Locations</h2>
       <p>Serving 3 states, including Kentucky, Tennesee, and Arizona. Select your location below.</p>
     </div>
     <div class="locations__list">
+      {%- for location in collections.location -%}
       <article class="locationCard">
         <div class="locationCard__content">
-          <h3 class="locationCard__name"></h3>
-          <h4 class="locationCard__cityState h6"></h4>
+          <h3 class="locationCard__name">{{ location.data.name }}</h3>
+          <h4 class="locationCard__cityState h6">{{ location.data.cityState }}</h4>
           <div class="btnGroup">
-            <a class="btn btn--outline" href="">Menu</Button>
-            <a class="btn" href="">Order Online</Button>
+            <a class="btn btn--outline" href="{{ location.data.menuUrl }}">Menu</a>
+            <a class="btn" href="{{ location.data.orderUrl }}">Order Online</a>
           </div>
-          <p class="locationCard__hours">Hours | <a href="">Directions</a></p>
+          <p class="locationCard__hours">{{ location.data.hours }} | <a href="{{ location.data.directionsUrl }}">Directions</a></p>
           <div class="locationCard__bg">
-            <img class="locationCard__bgImg" src="" alt="" />
+            <img class="locationCard__bgImg" src="/assets/img/{{ location.data.image }}.webp" alt="{{ location.data.name }}" loading="lazy"/>
           </div>
         </div>
       </article>
+      {%- endfor -%}
     </div>
   </div>
 </section>

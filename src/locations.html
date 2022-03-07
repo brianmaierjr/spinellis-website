@@ -1,0 +1,13 @@
+---
+layout: 'default.liquid'
+title: Spinellis Pizzeria
+---
+
+<ul>
+{%- for location in collections.location -%}
+  <li>{{ location.data.title }}</li>
+{%- endfor -%}
+</ul>
+
+
+

@@ -1,0 +1,61 @@
+.grungeSection {
+  background-color: var(--white);
+  background-image: url(/assets/img/grunge-black.png);
+  position: relative;
+  color: var(--black);
+  padding: 4rem 0;
+  z-index: 2;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 101% auto;
+    z-index: -1;
+    background-size: 100% 100%;
+
+    @include min(lg) {
+      height: 6rem;
+    }
+
+    @include min(xxl) {
+      height: 8rem;
+    }
+  }
+
+  &:before {
+    bottom: calc(100% - 1px);
+    background-image: url(/assets/img/border-white-top.svg);
+    background-position: bottom;
+  }
+
+  &:after {
+    top: calc(100% - 1px); 
+    background-image: url(/assets/img/border-white-bottom.svg);
+    background-position: top;
+  }
+
+  &--dark {
+    background-color: black;
+    background-image: url(/assets/img/grunge-white.png);
+    color: var(--white);
+
+    &:before {
+      background-image: url(/assets/img/border-black-top.svg);
+    }
+
+    &:after {
+      background-image: url(/assets/img/border-black-bottom.svg);
+    }      
+  }
+}
+
+.grungeSection__content {
+  max-width: 44 rem;
+  text-align: center;
+}

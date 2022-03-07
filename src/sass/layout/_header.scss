@@ -11,7 +11,7 @@
 
   &__logo {
     @include min(lg) {
-      margin-right: 1rem;
+      margin-right: 2rem;
     }
 
     @include min(xxl) {
@@ -80,7 +80,7 @@
         &:hover,
         &:focus,
         &:focus-within {
-          .sub-nav {
+          .siteHeader__subNav {
             display: flex;
             opacity: 1;
             transform: translateY(0);
