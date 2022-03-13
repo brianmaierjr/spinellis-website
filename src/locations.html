@@ -1,13 +1,42 @@
 ---
 layout: 'default.liquid'
 title: Spinellis Pizzeria
+bodyClass: 'locationsPage'
 ---
 
-<ul>
-{%- for location in collections.location -%}
-  <li>{{ location.data.title }}</li>
-{%- endfor -%}
-</ul>
+<div class="hero hero--locations grungeBg--dark">
+  <div class="wrapper">
+    <div class="hero__content">
+      <h1 data-aos="fade-up">Locations</h1>
+      <p data-aos="fade-up" data-aos-delay="500">Serving 3 states, including Kentucky, Tennesee, and Arizona. Select your location below to learn more.</p>
+      <svg class="hero--locations__bg" width="100%" height="100%">
+        <rect width="100%" height="100%" />
+      </svg>
+    </div>
+  </div>
+</div>
 
+<section class="locations grungeSection">
+  <div class="wrapper">
+    <div class="locations__list">
+      {%- for location in collections.location -%}
+      <article class="locationCard" data-aos="fade-up">
+        <div class="locationCard__content">
 
-
+          {{ location.data }}
+          <h2 class="h3 locationCard__name"><a href="{{ location.url }}">{{ location.data.name }}</a></h2>
+          <h3 class="locationCard__cityState">{{ location.data.cityState }}</h3>
+          <div class="btnGroup">
+            <a class="btn btn--outline" href="{{ location.data.menuUrl }}">Menu<span class="srOnly"> for {{ location.data.name }}</span></a>
+            <a class="btn" href="{{ location.data.orderUrl }}">Order Online<span class="srOnly"> from{{ location.data.name }}</span></a>
+          </div>
+          <p class="locationCard__hours">{{ location.data.hours }} | <a href="{{ location.data.directionsUrl }}">Directions<span class="srOnly"> to the {{ location.data.name }} Spinellis</span></a></p>
+          <div class="locationCard__bg">
+            <img class="locationCard__bgImg" src="/assets/img/{{ location.data.image }}.webp" alt="{{ location.data.name }}" loading="lazy"/>
+          </div>
+        </div>
+      </article>
+      {%- endfor -%}        
+    </div>
+  </div>
+</section>

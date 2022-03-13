@@ -2,17 +2,12 @@
   background-color: var(--white);
   color: var(--black);
   text-align: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 1rem;
+  padding-left: var(--space-l);
+  padding-right: var(--space-l);
+  padding-top: var(--space-2xl-3xl);
+  padding-bottom: var(--space-s);
   position: relative;
   z-index: 1;
-
-  @include min(lg) {
-    padding-top: 8rem;
-    padding-bottom: 2rem;
-  }
 
   &:after {
     content: "";
@@ -35,7 +30,7 @@
     text-decoration: none;
     font-size: var(--font-size-3);
     text-transform: uppercase;
-    padding: .5rem 1rem;
+    padding: var(--space-2xs) var(--space-s);
     overflow: hidden;
     position: relative;
     display: inline-block;

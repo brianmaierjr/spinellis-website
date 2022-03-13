@@ -7,3 +7,15 @@
 .color-red {
   color: var(--red);
 }
+
+.grungeBg {
+  background-color: var(--white);
+  background-image: url(/assets/img/grunge-black.png);
+  color: var(--black);
+}
+
+.grungeBg--dark {
+  background-color: var(--black);
+  background-image: url(/assets/img/grunge-white.png);
+  color: var(--white);
+}

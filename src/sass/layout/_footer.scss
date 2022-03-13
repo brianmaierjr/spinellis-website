@@ -6,26 +6,26 @@
 
   @include min(lg) {
     padding-top: 10rem;
-    padding-bottom: 2rem;
+    padding-bottom: var(--space-l);
   }
 }
 
 .siteFooter__nav {
-  padding-left: var(--padding-mobile);
-  padding-right: var(--padding-mobile);
-  margin-bottom: 2rem;
+  padding-left: var(--space-l);
+  padding-right: var(--space-l);
+  margin-bottom: var(--space-l);
 }
 
 .siteFooter__copyright {
-  padding-left: var(--padding-mobile);
-  padding-right: var(--padding-mobile);
+  padding-left: var(--space-l);
+  padding-right: var(--space-l);
 }
 
 .siteFooter__logo {
   img {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-l);
   }
 }
 
@@ -40,7 +40,7 @@
 
   li {
     list-style-type: none;
-    padding: .25rem 1rem;
+    padding: var(--space-3xs) var(--space-s);
 
     a {
       text-decoration: none;

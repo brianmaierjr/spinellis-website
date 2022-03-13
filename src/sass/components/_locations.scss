@@ -1,10 +1,26 @@
 .locations {
 
   &__list {
+    margin-top: var(--space-l-2xl);
+
     @include min(lg) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;    
+      gap: var(--space-l);    
+    }
+  }
+  
+  .locationCard {
+    margin-bottom: var(--space-l);
+
+    @include min(lg) {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      @include min(lg) {
+        grid-column: 1 / -1;
+      }
     }
   }
 }

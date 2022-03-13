@@ -15,27 +15,8 @@
 	color: var(--white);
 }
 
-.wrapper {
-	max-width: 125rem;
-	margin-left: auto;
-	margin-right: auto;
-
-	@include min(lg) {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-	
-	@media (min-width: 94rem) {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
-
-
-.grid-16 {
-	display: grid;
-	grid-template-columns: repeat(16, 1fr);
-	gap: 1.25rem;
+.noScroll {
+	overflow: hidden;
 }
 
 a {
@@ -54,16 +35,19 @@ a {
 }
 
 .text-wrapper {
-	padding: 0 2rem;
+	padding: 0 var(--space-l);
 }
 
-.neon {
-	position: absolute;
-	bottom: 0;
-	right: 2rem;
-	z-index: 3;
-	transform: translateY(50%);
-	filter: drop-shadow(0 0 .5rem var(--red));
-	width: 10rem;
-	height: auto;
+// Screen Reader Only Text
+.srOnly{
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
 }

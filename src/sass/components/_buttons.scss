@@ -1,7 +1,7 @@
 .btn {
-  padding: .5rem 1rem;
+  padding: var(--space-2xs)var(--space-s);
   background-color: var(--red);
-  border: 2px solid var(--red);
+  border: .125rem solid var(--red);
   color: white;
   text-decoration: none;
   font-weight: 700;
@@ -16,14 +16,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(.8rem, 1rem, 1.2rem);
+  font-size: var(--font-size-1);
   /* min-width: 15rem; */
 
   &:hover,
   &:focus {
-    background-color: var(--red-dark);
-    border-color: var(--red-dark);
-    color: white;
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--red);
   }
 
   &.btn--outline {
@@ -32,8 +32,27 @@
 
     &:hover,
     &:focus {
-      background-color: var(--red-dark);
-      border-color: var(--red-dark);
+      background-color: var(--white);
+      border-color: var(--white);
+      color: var(--red);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    margin-right: var(--space-2xs);
+
+    svg {
+      width: 100%;
+      height: auto;
+
+      * {
+        fill: currentColor;
+      }
     }
   }
 }

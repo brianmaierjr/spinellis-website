@@ -1,7 +1,7 @@
 .locationCard {
   background-color: var(--black);
   color: white;
-  padding: 20vw 2rem;
+  padding: var(--space-xl-3xl);
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -10,13 +10,16 @@
   text-align: center;
 
   @include min(lg) {
-    padding: 4vw 2vw;
+    // padding: 4vw 2vw;
 
     &:hover,
     &:focus {
       .locationCard__bg {
         filter: blur(3px);
-        opacity: .8;
+        opacity: .6;
+      }
+      
+      .btnGroup {
         transform: scale(1.2);
       }
     }
@@ -25,18 +28,47 @@
   &--fullWidth {
     grid-column: 1 / -1;
   }
+
   &__name { 
-    
     margin-bottom: 0;
+
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: var(--white);
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__content {
+    transition: var(--transition);
   }
   
   &__cityState {
-    margin-bottom: 2rem;
+    font-size: var(--font-size-3);
+    margin-bottom: var(--space-l);
     color: darken(white, 50%);
   }
   
   &__hours {
     margin-top: 1rem;
+  }
+
+  &__hours,
+  .btnGroup {
+    position: relative;
+    z-index: 2;
   }
   
   &__bg {
@@ -53,6 +85,10 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+
+  .btnGroup {
+    transition: var(--transition);
   }
 }
 

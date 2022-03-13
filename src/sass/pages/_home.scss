@@ -17,7 +17,7 @@
     @include min(lg) {
       align-items: center;
 			justify-content: center;
-			padding: 0 0 15rem; 
+			margin-bottom: var(--space-3xl);
 			min-height: 90vh;
     }
   }
@@ -25,37 +25,40 @@
   .hero__text {
     position: relative;
     z-index: 1;
-    grid-column-start: 2;
-    grid-column-end: -2;
+    grid-column-start: 1;
+    grid-column-end: -1;
     grid-row: 2;
-    padding: 1rem;
+    padding: var(--space-s);
     background-color: var(--black);
-    margin-top: -4rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: calc(var(--space-2xl) * -1);
+    // margin-left: var(--space-l);
+    // margin-right: var(--space-l);
 
     @include min(lg) {
       grid-column-start: 1;
-      grid-column-end: 10;
+      grid-column-end: -1;
       grid-row-start: 1;
-      margin-top: 0;
+      margin-top: 0; 
       background-color: transparent;
     }
 
     h1 {
-      margin-bottom: 1rem;
-      font-size: 3.12rem;
+      margin-bottom: var(--space-s-l);
+      // font-size: 3.12rem;
+      font-size: var(--space-xl-3xl);
 
       @include min(lg) {
-        margin-bottom: 2rem;
-        font-size: 6rem;
+        // margin-bottom: var(--space-l);
+        // font-size: 6rem;
+      }
+
+      span {
+        display: inline-block;
+        background-color: var(--black);
+        box-shadow: 0.25em 0 0 var(--black),-0.25em 0 0 var(--black);
       }
     }
 
-    span {
-      background-color: var(--black);
-      box-shadow: 0.25em 0 0 var(--black),-0.25em 0 0 var(--black);
-    }
   }
 
   .hero__video {
@@ -72,7 +75,8 @@
     }
 
     video {
-      width: 100%;
+      width: calc(100vw - var(--space-s));
+      margin-left: calc(-1 * var(--space-l));
 
       @include min(lg) {
         width: 100%;
@@ -83,8 +87,17 @@
   }
 
   .neon {
+    position: absolute;
+    bottom: 0;
+    right: var(--space-2xl);
+    z-index: 3;
+    transform: translateY(50%);
+    // filter: drop-shadow(0 0 .5rem var(--red));
+    width: 10rem;
+    height: auto;
+    
     @include min(lg) {
-      width: 15rem;
+      width: 20rem;
     }
   }
 }

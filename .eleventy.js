@@ -1,5 +1,24 @@
 const { Liquid } = require("liquidjs");
 
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, sizes) {
+  let metadata = await Image(src, {
+    widths: [300, 600],
+    formats: ["avif", "jpeg"]
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
+}
+
 module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget('src/sass/');
@@ -7,10 +26,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
   eleventyConfig.addPassthroughCopy({ 'src/js': 'assets/js' });
   eleventyConfig.addPassthroughCopy({ 'src/favicon': './' });
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
 
-  eleventyConfig.setBrowserSyncConfig({
-    files: ['_site/assets/css/*.css']
-  });
+  // eleventyConfig.setBrowserSyncConfig({
+  //   files: ['_site/assets/css/*.css']
+  // });
 
   return {
     dir: {

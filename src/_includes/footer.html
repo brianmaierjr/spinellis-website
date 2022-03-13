@@ -1,6 +1,6 @@
 <footer class="footer siteFooter">
     <a class="siteFooter__logo" href="/">
-      <img src="{{ 'assets/img/logo.svg' | url }}" alt="Spinellis Pizeria">
+      <img src="{{ '/assets/img/logo.svg' | url }}" alt="Spinellis Pizeria">
     </a>
 
     <nav class="siteFooter__nav" aria-label="Main Navigation">
@@ -19,3 +19,13 @@
 </footer>
 
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
+<!-- SWUP -->
+<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+<script>
+  const swup = new Swup();
+</script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>

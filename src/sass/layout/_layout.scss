@@ -1,0 +1,17 @@
+.grid-16 {
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	gap: var(--space-m);
+}
+
+// Wrapper
+.wrapper {
+	width: Min( calc(100% - var(--space-2xl)), 125rem);
+	margin-inline: auto;
+}
+
+// Section Spacing
+.section {
+	padding-top: var(--space-l-3xl);
+	padding-bottom: var(--space-l-3xl);
+}

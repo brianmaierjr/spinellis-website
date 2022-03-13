@@ -1,7 +1,7 @@
 .merch {
 
   &__text {
-    max-width: 44rem;
+    max-width: 56rem;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -10,19 +10,20 @@
   &__gallery {
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
-    margin-top: 4rem;
-    width: 100vw;
+    overflow: visible;
+    margin-top: var(--space-2xl);
+    // width: 100%;
+    // margin-left: calc(-1 * var(--space-l));
 
     @include min(lg) {
       flex-wrap: nowrap;
-      width: 100%;
+      width: calc(100% + var(--space-l));
     }
 
     img {
       position: relative;
       overflow: hidden;
-      width: 50vw;
+      width: 50%;
       height: auto;
       object-fit: cover;
       filter: drop-shadow(.5rem .5rem 1rem black);
@@ -34,25 +35,29 @@
 
       &:first-child {
         z-index: 4;
-        transform: translateY(2rem);
+        top: 2rem;
+        // transform: translateY(2rem);
       }
       &:nth-child(2) {
         z-index: 3;
 
         @include min(lg) {
-          transform: translateY(-2rem);
+          top: -2rem;
+          // transform: translateY(-2rem);
         }
       }
       &:nth-child(3) {
         z-index: 2;
 
         @include min(lg) {
-          transform: translateY(4rem);
+          // transform: translateY(4rem);
+          top: 4rem;
         }
       }
       &:last-child {
         z-index: 1;
-        transform: translateY(-1rem);
+        top: -2rem;
+        // transform: translateY(-1rem);
       }
     }
   }

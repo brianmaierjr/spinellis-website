@@ -1,15 +1,45 @@
-@keyframes neon {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 1vw var(--red)) drop-shadow(0 0 3vw var(--red)), drop-shadow(0 0 10vw var(--red)) drop-shadow(0 0 10vw var(--red)) drop-shadow(0 0 .4vw #FED128) drop-shadow(.5vw .5vw .1vw #806914);
-    color: #FED128;
+@import 'https://unpkg.com/aos@2.3.1/dist/aos.css';
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      filter:
+      drop-shadow(0 0 2px transparentize(#c43b3b, .001))
+      drop-shadow(0 0 6px transparentize(#B72F2F, .001))
+      drop-shadow(0 0 10px transparentize(#B72F2F, .001))
+      drop-shadow(0 0 20px transparentize(#B72F2F, .001));
   }
-  50% {
-    filter: drop-shadow(0 0 .5vw var(--red-dark)) drop-shadow(0 0 1.5vw var(--red-dark)) drop-shadow(0 0 5vw var(--red-dark)) drop-shadow(0 0 5vw var(--red-dark)) drop-shadow(0 0 .2vw var(--red-dark)) drop-shadow(.5vw .5vw .1vw #40340A);
-    color: #806914;
+
+  20%, 24%, 55% { 
+    filter: saturate(0) brightness(0);
   }
 }
 
-.neon {  
-  // animation: neon 1s ease infinite;
+@keyframes flicker-box-shadow {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      box-shadow:
+      0 0 2px transparentize(lighten(#c43b3b, .8), .001), 
+      0 0 6px transparentize(#B72F2F, .001), 
+      0 0 10px transparentize(#B72F2F, .001), 
+      0 0 20px transparentize(#B72F2F, .001);
+  }
+
+  20%, 24%, 55% { 
+    filter: saturate(0) brightness(0);
+    box-shadow: 0;
+  }
+}
+  
+
+// Page Load Animation
+.transition-fade {
+  transition: 0.4s all ease-in-out;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+.neon {
+  animation: flicker 1s infinite alternate;
 }

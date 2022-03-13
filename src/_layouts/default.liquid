@@ -9,13 +9,19 @@ title: My Rad Blog
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
-  <link type="text/css" href="{{ './assets/css/site.css' | url }}" rel="stylesheet" /> 
+  <link type="text/css" href="{{ '/assets/css/site.css' | url }}" rel="stylesheet" /> 
 </head>
 
-<body>
+<body class="{{ bodyClass }}">
+
   {% include 'header.html' %}
-  {{ content }}
+  
+  <main id="swup" class="transition-fade">
+    {{ content }}
+  </main>
+
   {% include 'footer.html' %}
+
 </body>
 
 </html>

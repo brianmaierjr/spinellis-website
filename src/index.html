@@ -6,8 +6,16 @@ title: Spinellis Pizzeria
 <section class="hero hero--home">
   <div class="hero__wrapper grid-16 wrapper">
     <div class="hero__text">
-      <h1><span>PIZZA. WINGS. SANDWICHES. FRIED OREOS. ALL YOUR LATE NIGHT CRAVINGS.</span></h1>
-      <a class="btn" href="/order">
+      <h1>
+        <span data-aos="fade-up" data-aos-delay="500">PIZZA. WINGS.</span><br/>
+        <span data-aos="fade-up" data-aos-delay="1000">SANDWICHES. FRIED OREOS.</span><br/>
+        <span data-aos="fade-up" data-aos-delay="1500">ALL OF YOUR</span><br/>
+        <span data-aos="fade-up" data-aos-delay="2000">LATE NIGHT CRAVINGS.</span>
+      </h1>
+      <a class="btn" href="/order" data-aos="fade-up" data-aos-delay="2500">
+        <span class="btn__icon">
+          {% include 'img/icon-pizza.svg' %}
+        </span>      
         Order Online
       </a>
     </div>
@@ -15,9 +23,9 @@ title: Spinellis Pizzeria
       <video autoplay loop>
         <source src="/assets/img/pizza.mp4" type="video/mp4">
       </video>
-    </div>
+      </div>
+      <img class="neon" src="/assets/img/neon-pizza.webp" alt="" loading="lazy">
   </div>
-  <img class="neon" src="/assets/img/neon-pizza.webp" alt="">
 </section>
 
 {% include 'locations.html' %}
@@ -28,6 +36,18 @@ title: Spinellis Pizzeria
 
 {% include 'footer-locations.html' %}
 
-
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script>
+  var slider = tns({
+    container: '.locations__list',
+    items: 1,
+    disable: false,
+    responsive: {
+      640: {
+        disable: true
+      }
+    }
+  });
+</script> -->
 
 

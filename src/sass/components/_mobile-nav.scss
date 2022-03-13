@@ -14,6 +14,7 @@
   opacity: 0;
   transform: translateY(4rem);
   transition: .2s all ease-in-out;
+  overflow-y: auto;
 
   @include min(lg) {
     display: none;
@@ -28,7 +29,7 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    padding: var(--padding-mobile);
+    padding: var(--space-l);
   }
 
   &__logo {
@@ -43,21 +44,26 @@
     height: 3rem;
     background-color: transparent;
     border: .125rem solid currentColor;
-    font-size: 2rem;
+    font-size: var(--space-l) ;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
   }
 
   &__menu {
     text-align: right;
     list-style-type: none;
-    padding-right: 2rem;
-    font-size: 3rem;
+    padding-right: var(--space-l);
+    font-size: var(--space-xl);
     line-height: 1.2;
     margin: 0;
-    padding-bottom: 2rem;
+    padding-bottom: var(--space-l);
 
     a {
       text-decoration: none;

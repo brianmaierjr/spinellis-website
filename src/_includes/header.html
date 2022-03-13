@@ -1,14 +1,20 @@
 <header class="siteHeader">
     <a class="siteHeader__mobileOrderBtn btn" herf="https://order.spinellispizzeria.com/" target="_blank">
+      <span class="btn__icon">
+        {% include 'img/icon-pizza.svg' %}
+      </span>
       Order Online
     </a>
   <div class="siteHeader__wrapper wrapper">
 
     <a class="siteHeader__logo" href="/">
-      <img src="{{ 'assets/img/logo.svg' | url }}" alt="Spinellis Pizeria">
+      <img src="/assets/img/logo.svg" alt="Spinellis Pizeria">
     </a>
 
     <button class="siteHeader__mobileNavTrigger btn btn--outline">
+      <span class="btn__icon">
+        {% include 'img/icon-menu.svg' %}
+      </span>
       Menu
     </button>
 
@@ -35,9 +41,15 @@
 
     <div class="btnGroup">
       <a class="btn btn--outline" href="https://spinellispizza.bigcartel.com/" target="_blank">
+        <span class="btn__icon">
+          {% include 'img/icon-shirt.svg' %}
+        </span>      
         Shop Merch
       </a>
       <a class="btn" href="https://order.spinellispizzeria.com/" target="_blank">
+        <span class="btn__icon">
+          {% include 'img/icon-pizza.svg' %}
+        </span>      
         Order Online
       </a>
     </div>
