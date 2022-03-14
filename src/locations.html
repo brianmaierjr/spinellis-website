@@ -22,8 +22,6 @@ bodyClass: 'locationsPage'
       {%- for location in collections.location -%}
       <article class="locationCard" data-aos="fade-up">
         <div class="locationCard__content">
-
-          {{ location.data }}
           <h2 class="h3 locationCard__name"><a href="{{ location.url }}">{{ location.data.name }}</a></h2>
           <h3 class="locationCard__cityState">{{ location.data.cityState }}</h3>
           <div class="btnGroup">

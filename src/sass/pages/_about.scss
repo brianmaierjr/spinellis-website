@@ -1,0 +1,19 @@
+.aboutPage {
+
+  .hero {
+    background-image: url(/assets/img/about-bg.webp);
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 10rem;
+
+    @include min(lg) {
+      padding-bottom: 20rem;
+    }
+  }
+
+  .bodyText {
+    &__hero { 
+      margin-top: -10rem;
+    }
+  }
+}

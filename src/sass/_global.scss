@@ -51,3 +51,24 @@ a {
   width: 1px;
   word-wrap: normal !important;
 }
+
+// Body Text for full width pages
+.bodyText {
+	.wrapper {
+		* {
+			max-width: 44rem;;
+			margin-inline: auto;
+		}
+		
+		div,
+		video,
+		img,
+		picture {
+			width: 100%;
+			max-width: 85rem;
+			margin-inline: auto;
+			margin-bottom: var(--space-l);
+		}
+	}
+
+}

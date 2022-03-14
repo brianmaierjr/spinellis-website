@@ -19,13 +19,15 @@
 </footer>
 
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
-<!-- SWUP -->
+<!-- SWUP 
 <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
 <script>
   const swup = new Swup();
-</script>
+</script>-->
 <!-- AOS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    easing: 'ease-in-out'
+  });
 </script>
