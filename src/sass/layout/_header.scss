@@ -3,10 +3,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 
   @include min(lg) {
     padding: var(--space-l);
+  }
+
+  @include max(lg) {
+    padding-top: 3rem;
   }
 
   &__logo {
@@ -17,6 +21,9 @@
 
   &__mobileOrderBtn {
     width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
     
     @include min(lg) {
       display: none;
@@ -36,6 +43,7 @@
   &__mobileNavTrigger {
     margin-bottom: 0;
     margin-right: 0;
+    min-width: auto;
 
     &:hover,
     &:focus {

@@ -1,12 +1,14 @@
 .btnGroup {
   display: flex;
+  flex-wrap:wrap;
   justify-content: center;
   align-items: center;
+  gap: var(--space-s);
 
-  > *:last-child {
-    margin-right: 0;
+  .btn {
+    margin: 0;
   }
-  
+
   &--justifyLeft {
     justify-content: flex-start;
   }

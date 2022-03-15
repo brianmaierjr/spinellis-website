@@ -10,8 +10,8 @@
   text-align: center;
   display: inline-block;
   transition: .2s all ease-in-out;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  margin-right: var(--space-s);
+  margin-bottom: var(--space-s);
   letter-spacing: .05em;
   display: inline-flex;
   align-items: center;

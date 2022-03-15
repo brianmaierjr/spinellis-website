@@ -58,6 +58,13 @@
       padding-left: 0;
       padding-right: 0;
     }
+    
+    @include max(lg) {
+      img {
+        max-width: 15rem;
+        margin-inline: auto;
+      }
+    }
   }
 
   &__content {
