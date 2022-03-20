@@ -1,0 +1,49 @@
+:root{
+	background-color: var(--charcoal, black);
+	color: var(--white);
+	font-family: "Barlow", sans-serif;
+	font-size: 100%;
+}
+
+/**
+ * Smooth scrolling on the whole document
+ */
+ html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+::selection {
+	background-color: var(--red);
+	color: var(--white);
+}
+
+::-moz-selection {
+	background-color: var(--red);
+	color: var(--white);
+}
+
+/**
+ * Smooth scrolling on the whole document
+ */
+ html {
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+a {
+	&:hover,
+	&:focus {
+		color: var(--red);
+	}
+}

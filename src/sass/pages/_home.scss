@@ -75,11 +75,12 @@
     }
 
     video {
-      width: calc(100vw - var(--space-s));
-      margin-left: calc(-1 * var(--space-l));
-
+      width: 100%;
+      height: auto;
+      
       @include min(lg) {
-        width: 100%;
+        margin-left: calc(-1 * var(--space-l));
+        width: calc(100vw - var(--space-s));
         height: 100%;
         object-fit: cover;
       }

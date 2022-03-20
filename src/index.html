@@ -7,12 +7,12 @@ title: Spinellis Pizzeria
   <div class="hero__wrapper grid-16 wrapper">
     <div class="hero__text">
       <h1>
-        <span data-aos="fade-up" data-aos-delay="500">PIZZA. WINGS.</span><br/>
-        <span data-aos="fade-up" data-aos-delay="1000">SANDWICHES. FRIED OREOS.</span><br/>
-        <span data-aos="fade-up" data-aos-delay="1500">ALL OF YOUR</span><br/>
-        <span data-aos="fade-up" data-aos-delay="2000">LATE NIGHT CRAVINGS.</span>
+        <span data-aos="fade-up" data-aos-delay="500" data-aos-anchor="#main">PIZZA. WINGS.</span><br/>
+        <span data-aos="fade-up" data-aos-delay="1000" data-aos-anchor="#main">SANDWICHES. FRIED OREOS.</span><br/>
+        <span data-aos="fade-up" data-aos-delay="1500" data-aos-anchor="#main">ALL OF YOUR</span><br/>
+        <span data-aos="fade-up" data-aos-delay="2000" data-aos-anchor="#main">LATE NIGHT CRAVINGS.</span>
       </h1>
-      <a class="btn" href="/order" data-aos="fade-up" data-aos-delay="2500">
+      <a class="btn" href="/order" data-aos="fade-up" data-aos-delay="2500" data-aos-anchor="#main">
         <span class="btn__icon">
           {% include 'img/icon-pizza.svg' %}
         </span>      
@@ -20,8 +20,9 @@ title: Spinellis Pizzeria
       </a>
     </div>
     <div class="hero__video">
-      <video autoplay loop>
-        <source src="/assets/img/pizza.mp4" type="video/mp4">
+      <video autoplay loop muted poster="/assets/img/video-thumb.jpg">
+        <source src="/assets/img/spinellis-website-optimized.mp4" type="video/mp4">
+        Your browser does not support the video tag.
       </video>
       </div>
       <img class="neon" src="/assets/img/neon-pizza.webp" alt="" loading="lazy">
@@ -36,18 +37,20 @@ title: Spinellis Pizzeria
 
 {% include 'footer-locations.html' %}
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="/assets/js/splide.min.js"></script>
 <script>
-  var slider = tns({
-    container: '.locations__list',
-    items: 1,
-    disable: false,
-    responsive: {
-      640: {
-        disable: true
-      }
+  new Splide( '.splide', {
+    perPage: 1,
+    destroy: true,
+    arrows: false,
+    pagination: false,
+    breakpoints: {
+      1090: {
+        arrows: true,
+        destroy: false,
+      },
     }
-  });
-</script> -->
+  }).mount();
+</script>
 
 

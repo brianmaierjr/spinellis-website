@@ -3,7 +3,7 @@
 @import 'abstracts/mixins';
 @import 'base/fonts';
 @import 'base/typography';
-@import 'global';
+@import 'base/global';
 @import 'layout/layout';
 @import 'components/buttons';
 @import 'components/hero';
@@ -18,7 +18,10 @@
 @import 'components/locations';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'vendor/splide.min.css';
+@import 'vendor/splide-core.min.css';
+@import 'vendor/splide-default.min.css';
 @import 'pages/home';
 @import 'pages/locations'; 
 @import 'pages/about'; 
-@import 'utility';
+@import 'base/utility';

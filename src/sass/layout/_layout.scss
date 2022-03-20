@@ -15,3 +15,27 @@
 	padding-top: var(--space-l-3xl);
 	padding-bottom: var(--space-l-3xl);
 }
+
+.text-wrapper {
+	padding: 0 var(--space-l);
+}
+
+// Body Text for full width pages
+.bodyText {
+	.wrapper {
+		* {
+			max-width: 44rem;;
+			margin-inline: auto;
+		}
+		
+		div,
+		video,
+		img,
+		picture {
+			width: 100%;
+			max-width: 85rem;
+			margin-inline: auto;
+			margin-bottom: var(--space-l);
+		}
+	}
+}

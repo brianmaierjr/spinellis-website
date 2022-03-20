@@ -4,23 +4,27 @@
       <h2 class="color-red">Our Locations</h2>
       <p>Serving 3 states, including Kentucky, Tennesee, and Arizona. Select your location below.</p>
     </div>
-    <div class="locations__list">
-      {%- for location in collections.location -%}
-      <article class="locationCard" data-aos="fade-up">
-        <div class="locationCard__content">
-          <h3 class="locationCard__name"><a href="{{ location.url }}">{{ location.data.name }}</a></h3>
-          <h4 class="locationCard__cityState h6">{{ location.data.cityState }}</h4>
-          <div class="btnGroup">
-            <a class="btn btn--outline" href="{{ location.data.menuUrl }}">Menu<span class="srOnly"> for {{ location.data.name }}</span></a>
-            <a class="btn" href="{{ location.data.orderUrl }}">Order Online<span class="srOnly"> from{{ location.data.name }}</span></a>
-          </div>
-          <p class="locationCard__hours">{{ location.data.hours }} | <a href="{{ location.data.directionsUrl }}">Directions<span class="srOnly"> to the {{ location.data.name }} Spinellis</span></a></p>
-          <div class="locationCard__bg">
-            <img class="locationCard__bgImg" src="/assets/img/{{ location.data.image }}.webp" alt="{{ location.data.name }}" loading="lazy"/>
-          </div>
+    <div class="splide">
+      <div class="splide__track">
+        <div class="locations__list splide__list">
+          {%- for location in collections.location -%}
+          <article class="locationCard splide__slide" data-aos="fade-up">
+            <div class="locationCard__content">
+              <h3 class="locationCard__name"><a href="{{ location.url }}">{{ location.data.name }}</a></h3>
+              <h4 class="locationCard__cityState h6">{{ location.data.cityState }}</h4>
+              <div class="btnGroup">
+                <a class="btn btn--outline" href="{{ location.data.menuUrl }}">Menu<span class="srOnly"> for {{ location.data.name }}</span></a>
+                <a class="btn" href="{{ location.data.orderUrl }}">Order Online<span class="srOnly"> from{{ location.data.name }}</span></a>
+              </div>
+              <p class="locationCard__hours">{{ location.data.hours }} | <a href="{{ location.data.directionsUrl }}">Directions<span class="srOnly"> to the {{ location.data.name }} Spinellis</span></a></p>
+              <div class="locationCard__bg">
+                <img class="locationCard__bgImg" src="/assets/img/{{ location.data.image }}.webp" alt="{{ location.data.name }}" loading="lazy"/>
+              </div>
+            </div>
+          </article>
+          {%- endfor -%}        
         </div>
-      </article>
-      {%- endfor -%}        
+      </div>
     </div>
   </div>
 </section>

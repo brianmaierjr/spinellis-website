@@ -59,8 +59,10 @@
       padding-right: 0;
     }
     
-    @include max(lg) {
-      img {
+    img {
+      width: 100%;
+
+      @include max(lg) {
         max-width: 15rem;
         margin-inline: auto;
       }
