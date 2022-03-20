@@ -79,8 +79,7 @@
       height: auto;
       
       @include min(lg) {
-        margin-left: calc(-1 * var(--space-l));
-        width: calc(100vw - var(--space-s));
+        width: 100%;
         height: 100%;
         object-fit: cover;
       }

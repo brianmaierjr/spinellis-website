@@ -12,6 +12,7 @@
 
   &Buttons {
     display: flex;
+    justify-content: center;
     gap: var(--space-l);
 
     @include min(lg) {
