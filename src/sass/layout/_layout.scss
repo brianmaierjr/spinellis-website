@@ -8,6 +8,10 @@
 .wrapper {
 	width: Min( calc(100% - var(--space-l)), 125rem);
 	margin-inline: auto;
+
+	&--fullWidth {
+		width: Min( 100%, 125rem);
+	}
 }
 
 // Section Spacing
