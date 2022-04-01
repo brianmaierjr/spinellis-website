@@ -12,7 +12,7 @@
 
 	// Font Scale
 	--font-size-1: clamp(12.8px, 0.31vw + 11.57px, 16px);
-	--font-size-2: clamp(16px, 0.38vw + 14.46px, 20px);
+	--font-size-2: clamp(16px, 0.38vw + 14.46px, 24px);
 	--font-size-3: clamp(20px, 0.48vw + 18.08px, 25px);
 	--font-size-4: clamp(25px, 0.6vw + 22.6px, 31.25px);
 	--font-size-5: clamp(31.25px, 0.75vw + 28.25px, 39.06px);
@@ -20,8 +20,6 @@
 	--font-size-7: clamp(48.83px, 1.17vw + 44.13px, 61.04px);
 	--font-size-8: clamp(61.04px, 1.47vw + 55.17px, 76.29px);
 	--font-size-9: clamp(50.21px, 1.83vw + 68.96px, 95.37px);	
-
-
 
 	// Line Height
   --heading-line-height: 1.1;

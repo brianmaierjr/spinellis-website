@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .mobileNav {
   background-color: var(--black);
   background-image: url(/assets/img/grunge-white.png);

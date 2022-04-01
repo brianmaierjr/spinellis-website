@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .grungeSection {
   background-color: var(--white);
   background-image: url(/assets/img/grunge-black.png);

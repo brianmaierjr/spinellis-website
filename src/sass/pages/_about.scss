@@ -1,19 +1,25 @@
+@use '../abstracts' as *;
+
 .aboutPage {
 
   .hero {
     background-image: url(/assets/img/about-bg.webp);
     background-size: cover;
     text-align: center;
-    padding-bottom: 10rem;
+    padding-bottom: 13rem;
 
     @include min(lg) {
-      padding-bottom: 20rem;
+      padding-bottom: 30rem;
     }
   }
 
   .bodyText {
-    &__hero { 
-      margin-top: -10rem;
+   .wrapper { 
+      transform: translateY(-9rem);
+
+      @include min(lg) {
+        transform: translateY(-25rem);
+      }
     }
   }
 }
