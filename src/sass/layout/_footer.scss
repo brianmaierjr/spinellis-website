@@ -4,6 +4,10 @@
   padding-top: 6rem;
   text-align: center;
   background-color: var(--charcoal);
+  // background-image: url(/assets/img/spinellis-handstyle.svg);
+  background-position: 50% center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   color: var(--white);
 
   @include min(lg) {
@@ -50,4 +54,10 @@
       text-transform: uppercase;
     }
   }
+}
+
+.siteFooter__eye {
+  max-width: 10rem;
+  height: auto;
+  fill: white;
 }

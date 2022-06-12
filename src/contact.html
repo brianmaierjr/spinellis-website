@@ -17,7 +17,7 @@ bodyClass: 'contactPage'
       <div class="contact-us-locations">
         {%- for location in collections.location -%}
           <div class="contact-us-location">
-            <h2 class="h5">{{ location.data.name }}</h2>
+            <h2 class="h5 contact-us-location__name">{{ location.data.name }}</h2>
             <p>{{ location.data.street }}<br>
             {{ location.data.cityState }} {{ location.data.zip }}<br>
             {{ location.data.phone }}</p>

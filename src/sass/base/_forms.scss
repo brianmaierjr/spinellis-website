@@ -1,0 +1,15 @@
+input,
+textarea {
+  background-color: rgba(255, 255, 255, .2);
+  border: none;
+  outline: 0;
+  padding: var(--space-xs);
+  color: white;
+  width: 100%;
+  margin-bottom: var(--space-s);
+
+  &[type=submit] {
+    width: auto;
+    margin-left: auto;
+  }
+}

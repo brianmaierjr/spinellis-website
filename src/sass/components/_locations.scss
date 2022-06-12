@@ -6,12 +6,12 @@
     margin-top: var(--space-l-2xl);
 
     @include min(lg) {
-      display: grid;
+      display: grid !important;
       grid-template-columns: 1fr 1fr;
-      gap: var(--space-l);    
+      gap: var(--space-l);
     }
   }
-  
+
   .locationCard {
     margin-bottom: var(--space-l);
 
