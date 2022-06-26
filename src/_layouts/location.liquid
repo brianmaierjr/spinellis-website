@@ -1,0 +1,96 @@
+---
+title: My Rad Blog
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#000000">
+  <link type="text/css" href="{{ '/assets/css/site.css' | url }}" rel="stylesheet" /> 
+</head>
+
+<body class="locationPage location-{{ name | downcase | replace: ' ', '-' | remove: '.' }}"> 
+
+  <a class="skip-to-content-link btn" href="#main">
+    Skip to content
+  </a>
+
+  {% include 'header.html' %}
+  
+  <main id="swup main" class="transition-fade">
+    <section class="hero">
+      <div class="hero__content">
+        <h1>{{ name }}</h1>
+        <h2 class="h6">{{ cityState }}</h2>
+        <div class="btnGroup">
+          <a class="btn btn--outline" href="{{ menuUrl }}">Menu<span class="srOnly"> for {{ location.data.name }}</span></a>
+          <a class="btn" href="{{ orderUrl }}">Order Online<span class="srOnly"> from{{ location.data.name }}</span></a>
+        </div>
+      </div>
+      <div class="hero__bg">
+        <img class="hero__bgImg" src="/assets/img/{{ image }}.webp" alt="{{ name }}" loading="lazy"/>
+      </div>
+    </section>
+
+    <section class="bodyText grungeSection">
+
+      <div class="locationInfo wrapper">
+        <div class="locationInfo__item">
+          <h2 class="h6 locationInfo__heading">Location</h2>
+          <p>
+            {{ street }}<br>
+            {{ cityState }}<br>
+            <a href="{{ directionsUrl }}">Directions</a>
+          </p>
+        </div>
+        <div class="locationInfo__item">
+          <h2 class="h6 locationInfo__heading">Hours</h2>
+          <p>{{ hours }}</p>
+        </div>
+        <div class="locationInfo__item">
+          <h2 class="h6 locationInfo__heading">Phone</h2>
+          <p><a href="tel:{{ phone }}">{{ phone }}</a></p>
+        </div>
+        <div class="locationInfo__item">
+          <h2 class="h6 locationInfo__heading">Social</h2>
+          {% for socialLink in social %}
+            <a class="locationhref="{{ socialLink.url }}" target=""_blank"><span class="srOnly">{{ metadata.title }} on {{ socialLink.name }}</span>{% include 'img/icon-social-{{ socialLink.name }}.svg' %}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+
+      <div class="wrapper">
+        <div class="locationAbout">
+          <h2 class="color-red align-center">About this location</h2>
+          {{ content }}
+        </div>
+
+        <div class="locationGallery">
+          <h2 class="color-red align-center">Gallery</h2>
+          <div class="locationGallery__grid">
+            {% for image in gallery %}
+              <img class="locationGallery__gridItem" src="/assets/img/{{ image.src }}" alt="{{ image.alt }}" loading="lazy">
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'footer.html' %}
+
+</body>
+
+</html>

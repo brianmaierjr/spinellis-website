@@ -37,23 +37,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
     position: relative;
-
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 4rem;
-      display: block;
-      background-repeat: no-repeat;
-      background-size: 101% auto;
-      z-index: -1;
-      background-size: 100% 100%;
-      top: calc(100% - 1px);
-      background-image: url(/assets/border-black-bottom.svg);
-      background-position: top;
-      z-index: 2;
-    }
+    z-index: 3;
 
     &-locations {
       grid-column: 2 / span 3;
@@ -90,6 +74,25 @@
           margin-right: 2rem;
         }
       }
+    }
+  }
+
+  .siteFooter {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4rem;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: 101% auto;
+      z-index: -1;
+      background-size: 100% 100%;
+      bottom: calc(100% - 1px);
+      background-image: url(/assets/border-black-top.svg);
+      background-position: top;
+      z-index: 2;
     }
   }
 

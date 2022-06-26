@@ -1,4 +1,4 @@
-:root{
+:root {
 	background-color: var(--charcoal, black);
 	color: var(--white);
 	font-family: "Barlow", sans-serif;
@@ -8,7 +8,7 @@
 /**
  * Smooth scrolling on the whole document
  */
- html {
+html {
 	scroll-behavior: smooth;
 }
 
@@ -31,7 +31,7 @@
 /**
  * Smooth scrolling on the whole document
  */
- html {
+html {
 	scroll-behavior: smooth;
 }
 
@@ -42,8 +42,27 @@
 }
 
 a {
+
 	&:hover,
 	&:focus {
 		color: var(--red);
 	}
+}
+
+// Skip to Content Link
+
+.skip-to-content-link {
+	background: #e77e23;
+	height: 2rem;
+	left: 1em;
+	padding: 8px;
+	position: absolute;
+	transform: translateY(-150%);
+	transition: transform 0.3s;
+	text-decoration: none;
+	z-index: 5;
+}
+
+.skip-to-content-link:focus {
+	transform: translateY(0%);
 }

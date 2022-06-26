@@ -4,9 +4,19 @@ textarea {
   border: none;
   outline: 0;
   padding: var(--space-xs);
-  color: white;
+  color: var(--white);
   width: 100%;
   margin-bottom: var(--space-s);
+  transition: .2s all ease-in-out;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .4);
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 1);
+    color: var(--black);
+  }
 
   &[type=submit] {
     width: auto;

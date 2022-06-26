@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  z-index: 1;   
+  z-index: 1;
   overflow: hidden;
   text-align: center;
 
@@ -20,7 +20,7 @@
         filter: blur(3px);
         opacity: .6;
       }
-      
+
       .btnGroup {
         transform: scale(1.2);
       }
@@ -31,7 +31,7 @@
     grid-column: 1 / -1;
   }
 
-  &__name { 
+  &__name {
     margin-bottom: 0;
 
     a {
@@ -56,13 +56,13 @@
   &__content {
     transition: var(--transition);
   }
-  
+
   &__cityState {
     font-size: var(--font-size-3);
     margin-bottom: var(--space-l);
     color: darken(white, 50%);
   }
-  
+
   &__hours {
     margin-top: 1rem;
   }
@@ -72,7 +72,7 @@
     position: relative;
     z-index: 2;
   }
-  
+
   &__bg {
     position: absolute;
     top: 0;
@@ -82,7 +82,7 @@
     width: 100%;
     height: 100%;
   }
-  
+
   &__bgImg {
     object-fit: cover;
     width: 100%;
@@ -96,7 +96,7 @@
 
 @media (min-width: 1090px) {
   article {
-    
+
     &:hover,
     &:focus {
       .bg {

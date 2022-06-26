@@ -37,9 +37,21 @@
   }
 
   &:after {
-    top: calc(100% - 1px); 
+    top: calc(100% - 1px);
     background-image: url(/assets/img/border-white-bottom.svg);
     background-position: top;
+  }
+
+  &--topOnly {
+    &:after {
+      display: none;
+    }
+  }
+
+  &--bottomOnly {
+    &:before {
+      display: none;
+    }
   }
 
   &--dark {
@@ -53,11 +65,12 @@
 
     &:after {
       background-image: url(/assets/img/border-black-bottom.svg);
-    }      
+    }
   }
 }
 
 .grungeSection__content {
   max-width: 44 rem;
   text-align: center;
+  margin-bottom: var(--space-2xl);
 }

@@ -14,11 +14,11 @@
   }
 
   .bodyText {
-   .wrapper { 
+    .wrapper {
       transform: translateY(-9rem);
 
       @include min(lg) {
-        transform: translateY(-25rem);
+        transform: translateY(-15rem);
       }
     }
   }

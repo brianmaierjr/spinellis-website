@@ -11,7 +11,7 @@ bodyClass: 'contactPage'
   </div>
 </section>
 
-<section class="contact-us">
+<section class="contact-us grungeSection grungeSection--dark grungeSection--bottomOnly">
   <div class="wrapper">
     <div class="grid-16">
       <div class="contact-us-locations">
@@ -20,7 +20,8 @@ bodyClass: 'contactPage'
             <h2 class="h5 contact-us-location__name">{{ location.data.name }}</h2>
             <p>{{ location.data.street }}<br>
             {{ location.data.cityState }} {{ location.data.zip }}<br>
-            {{ location.data.phone }}</p>
+            <a href="{{ location.data.directionsUrl }}" target="_blank">Get Directions</a><br><br>
+            <a href="tel:{{ location.data.phone }}">{{ location.data.phone }}</a></p>
           </div>
         {%- endfor -%}
       </div> 
@@ -40,7 +41,7 @@ bodyClass: 'contactPage'
           </div>
           <div>
             <label for="message">Message</label><br>
-            <textarea name="message" id="message" cols="30" rows="15"></textarea>
+            <textarea name="message" id="message" cols="30" rows="1`5"></textarea>
           </div>
           <input class="btn" type="submit" value="Message Us">
         </form>

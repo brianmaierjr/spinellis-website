@@ -1,36 +1,57 @@
-
 body {
   font-size: var(--font-size-2);
-  line-height: var(--body-line-height); 
+  line-height: var(--body-line-height);
 }
 
 p {
   margin-bottom: var(--space-l);
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	font-family: var(--font-condensed);
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--font-condensed);
   line-height: var(--heading-line-height);
-  margin-bottom: var(--space-s);
+  margin-bottom: .5em;
   text-transform: uppercase;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: var(--font-size-9);
 }
-h2, .h2 {
-  font-size: var(--font-size-8); 
+
+h2,
+.h2 {
+  font-size: var(--font-size-8);
 }
-h3, .h3 {
+
+h3,
+.h3 {
   font-size: var(--font-size-7);
 }
-h4, .h4 {
+
+h4,
+.h4 {
   font-size: var(--font-size-6);
 }
-h5, .h5 {
+
+h5,
+.h5 {
   font-size: var(--font-size-5);
 }
-h6, .h6 {
+
+h6,
+.h6 {
   font-size: var(--font-size-4);
   text-transform: none;
   font-family: var(--font-normal);
