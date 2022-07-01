@@ -21,13 +21,10 @@ title: My Rad Blog
 
 <body class="{{ bodyClass }}">
 
-  <a class="skip-to-content-link btn" href="#main">
-    Skip to content
-  </a>
-
+  {% include 'skip-to-link.html' %}
   {% include 'header.html' %}
   
-  <main id="swup main" class="transition-fade">
+  <main id="main">
     {{ content }}
   </main>
 

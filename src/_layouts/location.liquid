@@ -21,13 +21,10 @@ title: My Rad Blog
 
 <body class="locationPage location-{{ name | downcase | replace: ' ', '-' | remove: '.' }}"> 
 
-  <a class="skip-to-content-link btn" href="#main">
-    Skip to content
-  </a>
-
+  {% include 'skip-to-link.html' %}
   {% include 'header.html' %}
   
-  <main id="swup main" class="transition-fade">
+  <main id="main">
     <section class="hero">
       <div class="hero__content">
         <h1>{{ name }}</h1>
@@ -64,7 +61,7 @@ title: My Rad Blog
         <div class="locationInfo__item">
           <h2 class="h6 locationInfo__heading">Social</h2>
           {% for socialLink in social %}
-            <a class="locationhref="{{ socialLink.url }}" target=""_blank"><span class="srOnly">{{ metadata.title }} on {{ socialLink.name }}</span>{% include 'img/icon-social-{{ socialLink.name }}.svg' %}</a>
+            <a class="locationInfo__socialLink" href="{{ socialLink.url }}" target=""_blank"><span class="srOnly">{{ metadata.title }} on {{ socialLink.name }}</span>{% include 'img/icon-social-{{ socialLink.name }}.svg' %}</a>
           {% endfor %}
         </div>
       </div>

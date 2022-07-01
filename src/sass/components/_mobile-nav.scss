@@ -8,6 +8,7 @@
   top: 0;
   left: 0;
   width: 100vw;
+  height: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
   display: flex;
@@ -24,7 +25,7 @@
 
   &.active {
     z-index: 99;
-    transform:translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 
@@ -38,6 +39,10 @@
     img {
       width: 10rem;
       height: auto;
+
+      @media (max-height: 43rem) {
+        width: 6rem;
+      }
     }
   }
 
@@ -46,7 +51,7 @@
     height: 3rem;
     background-color: transparent;
     border: .125rem solid currentColor;
-    font-size: var(--space-l) ;
+    font-size: var(--space-l);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,15 +67,23 @@
     text-align: right;
     list-style-type: none;
     padding-right: var(--space-l);
-    font-size: var(--space-xl);
+    font-size: var(--font-size-7);
     line-height: 1.2;
     margin: 0;
     padding-bottom: var(--space-l);
+
+    @media (max-height: 43rem) {
+      line-height: .8;
+    }
 
     a {
       text-decoration: none;
       font-family: var(--font-condensed);
       text-transform: uppercase;
+
+      @media (max-height: 43rem) {
+        font-size: var(--font-size-5);
+      }
     }
   }
 }

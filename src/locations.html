@@ -7,8 +7,8 @@ bodyClass: 'locationsPage'
 <div class="hero hero--locations grungeBg--dark">
   <div class="wrapper">
     <div class="hero__content">
-      <h1 data-aos="fade-up">Locations</h1>
-      <p data-aos="fade-up" data-aos-delay="500">Serving 3 states, including Kentucky, Tennesee, and Arizona. Select your location below to learn more.</p>
+      <h1>Locations</h1>
+      <p>Serving 3 states, including Kentucky, Tennesee, and Arizona. Select your location below to learn more.</p>
       <svg class="hero--locations__bg" width="100%" height="100%">
         <rect width="100%" height="100%" />
       </svg>
@@ -20,7 +20,7 @@ bodyClass: 'locationsPage'
   <div class="wrapper">
     <div class="locations__list">
       {%- for location in collections.location -%}
-      <article class="locationCard" data-aos="fade-up">
+      <article class="locationCard">
         <div class="locationCard__content">
           <h2 class="h3 locationCard__name"><a href="{{ location.url }}">{{ location.data.name }}</a></h2>
           <h3 class="locationCard__cityState">{{ location.data.cityState }}</h3>

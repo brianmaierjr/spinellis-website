@@ -8,7 +8,7 @@
       <div class="splide__track">
         <div class="locations__list splide__list">
           {%- for location in collections.location -%}
-          <article class="locationCard splide__slide" data-aos="fade-up">
+          <article class="locationCard splide__slide">
             <div class="locationCard__content">
               <h3 class="locationCard__name"><a href="{{ location.url }}">{{ location.data.name }}</a></h3>
               <h4 class="locationCard__cityState h6">{{ location.data.cityState }}</h4>

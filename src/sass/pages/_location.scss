@@ -41,7 +41,7 @@
   }
 
   &__heading {
-    color: var(--red);
+    // color: var(--red);
     font-family: var(--font-condensed);
     text-transform: uppercase;
   }
@@ -49,6 +49,18 @@
   &__item {
     flex: 1;
     margin-bottom: 0 !important;
+  }
+
+  &__socialLink {
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+      svg>* {
+        fill: darken(white, 20%);
+      }
+    }
   }
 }
 
