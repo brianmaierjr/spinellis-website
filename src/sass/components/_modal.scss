@@ -14,7 +14,7 @@
   background-color: #fff;
   background-image: url(/assets/img/grunge-black.png);
   padding: var(--space-l);
-  min-width: 30rem;
+  // min-width: 30rem;
   max-width: 40rem;
   max-height: 90vh;
   overflow-y: auto;
@@ -23,7 +23,8 @@
 .modal__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .modal__title {

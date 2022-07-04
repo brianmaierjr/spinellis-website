@@ -42,20 +42,28 @@
 
   .hero__content {
     display: inline-block;
-    padding: var(--space-2xl);
     position: relative;
     position: relative;
+
+    @include min(md) {
+      padding: var(--space-2xl);
+    }
   }
 
   &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation: flicker 1s infinite alternate;
-    fill: transparent;
-    border: .5rem solid var(--red);
+    display: none;
+
+    @include min(md) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation: flicker 1s infinite alternate;
+      fill: transparent;
+      border: .5rem solid var(--red);
+    }
   }
 
   p {
