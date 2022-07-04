@@ -44,6 +44,8 @@
 
 .modal__header .modal__close:before {
   content: "\2715";
+  color: var(--black);
+  font-size: var(--font-size-4);
 }
 
 .modal__content {
