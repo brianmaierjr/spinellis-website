@@ -18,6 +18,7 @@
   transform: translateY(4rem);
   transition: .2s all ease-in-out;
   overflow-y: auto;
+  visibility: hidden;
 
   @include min(lg) {
     display: none;
@@ -27,6 +28,7 @@
     z-index: 99;
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
   }
 
   &__top {

@@ -42,10 +42,11 @@ html {
 }
 
 a {
+	text-decoration: underline;
 
 	&:hover,
 	&:focus {
-		color: var(--red);
+		text-decoration: none;
 	}
 }
 

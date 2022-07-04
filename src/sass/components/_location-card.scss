@@ -14,8 +14,7 @@
   @include min(lg) {
     // padding: 4vw 2vw;
 
-    &:hover,
-    &:focus {
+    &:hover {
       .locationCard__bg {
         filter: blur(3px);
         opacity: .6;

@@ -171,12 +171,9 @@
   width: 1.2em;
 }
 
-.splide__arrow:hover {
-  opacity: 0.9;
-}
-
+.splide__arrow:hover,
 .splide__arrow:focus {
-  outline: none;
+  opacity: 0.9;
 }
 
 .splide__arrow--prev {

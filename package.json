@@ -22,5 +22,7 @@
     "sass": "^1.49.9",
     "swup": "^2.0.14"
   },
-  "dependencies": {}
+  "dependencies": {
+    "focus-trap": "^6.9.4"
+  }
 }

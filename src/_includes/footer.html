@@ -7,7 +7,7 @@
   <nav class="siteFooter__nav" aria-label="Main Navigation">
     <ul class="siteFooter__list">
       <li><a href="/locations/">Locations</a></li>
-      <li><a href="/menu/">Menu</a></li>
+      <li><a href="javascript:;" data-micromodal-trigger="modal-menu">Menu</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/contact/">Contact</a></li>
       <li><a href="/media/">Media</a></li>
@@ -19,6 +19,8 @@
   <p class="siteFooter__copyright">&copy;<script type="text/javascript"> document.write(new Date().getFullYear()); </script> Spinellis Pizza. Website design and development by <a href="https://brianmaierjr.com" target="_blank">Brian Maier Jr.</a></p>
 </footer>
 
+<script src="https://unpkg.com/tabbable/dist/index.umd.js"></script>
+<script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
 <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script>

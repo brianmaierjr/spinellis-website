@@ -20,8 +20,8 @@ bodyClass: 'contactPage'
             <h2 class="h5 contact-us-location__name">{{ location.data.name }}</h2>
             <p>{{ location.data.street }}<br>
             {{ location.data.cityState }} {{ location.data.zip }}<br>
-            <a href="{{ location.data.directionsUrl }}" target="_blank">Get Directions</a><br><br>
-            <a href="tel:{{ location.data.phone }}">{{ location.data.phone }}</a></p>
+            <a href="{{ location.data.directionsUrl }}" target="_blank">Get Directions<span class="srOnly"> to {{ location.data.name }}</span></a><br><br>
+            <a href="tel:{{ location.data.phone }}"><span class="srOnly">Call Spinellis {{ location.data.name }} at </span>{{ location.data.phone }}</a></p>
           </div>
         {%- endfor -%}
       </div> 
@@ -29,19 +29,19 @@ bodyClass: 'contactPage'
         <form name="contact" method="POST" data-netlify="true" netlify>
           <div class="half-input">
             <label for="first-name">First Name</label><br>
-            <input type="text" name="first-name" required><br>
+            <input type="text" name="first-name" id="first-name" required><br>
           </div>
           <div class="half-input">
             <label for="last-name">Last Name</label><br>
-            <input type="text" name="last-name" required><br>
+            <input type="text" name="last-name" id="last-name" required><br>
           </div>
           <div>
             <label for="email">Email Address</label><br>
-            <input type="text" name="email" required><br>
+            <input type="text" name="email" id="email" required><br>
           </div>
           <div>
             <label for="message">Message</label><br>
-            <textarea name="message" id="message" cols="30" rows="1`5"></textarea>
+            <textarea name="message" id="message" cols="30" rows="15"></textarea>
           </div>
           <input class="btn" type="submit" value="Message Us">
         </form>
