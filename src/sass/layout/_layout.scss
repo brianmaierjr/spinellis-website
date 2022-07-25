@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .grid-16 {
 	display: grid;
 	grid-template-columns: repeat(16, 1fr);
@@ -6,11 +8,57 @@
 
 // Wrapper
 .wrapper {
-	width: Min( calc(100% - var(--space-l)), 125rem);
+	width: Min(calc(100% - var(--space-l)), 100rem);
 	margin-inline: auto;
 
 	&--fullWidth {
-		width: Min( 100%, 125rem);
+		width: Min(100%, 125rem);
+	}
+}
+
+// Grid
+
+.grid-videos {
+	@include min(md) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-l);
+	}
+
+	&--item {
+		position: relative;
+		background-color: var(--charcoal);
+
+		&:before {
+			content: "";
+			width: 5em;
+			height: 5em;
+			background-image: url(/assets/img/icon-play-btn.svg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			transition: .2s all ease-in-out;
+		}
+
+		&:hover,
+		&:focus {
+			img {
+				opacity: .4;
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: .2s all ease-in-out;
+			margin-bottom: 0 !important;
+		}
 	}
 }
 
@@ -26,20 +74,34 @@
 
 // Body Text for full width pages
 .bodyText {
-	.wrapper {
-		* {
-			max-width: 44rem;;
-			margin-inline: auto;
-		}
-		
-		div,
-		video,
-		img,
-		picture {
+	.bodyText__hero {
+		img {
 			width: 100%;
 			max-width: 85rem;
 			margin-inline: auto;
 			margin-bottom: var(--space-l);
+			height: auto;
+		}
+	}
+
+	.wrapper {
+		* {
+			max-width: 44rem;
+			;
+			margin-inline: auto;
+		}
+
+		> {
+
+			div,
+			video,
+			img,
+			picture {
+				width: 100%;
+				max-width: 85rem;
+				margin-inline: auto;
+				margin-bottom: var(--space-l);
+			}
 		}
 	}
 }

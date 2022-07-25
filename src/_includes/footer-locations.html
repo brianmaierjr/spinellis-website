@@ -3,7 +3,7 @@
     <ul class="footerLocations__navList">
       {%- for location in collections.location -%}
         <li class="footerLocations__navItem">
-        <a href="{{ location.data.url }}" data-replace="{{ location.data.name }}"><span>{{ location.data.name }}</span></a>
+        <a href="{{ location.url }}" data-replace="{{ location.data.name }}"><span>{{ location.data.name }}</span></a>
         </li>
       {%- endfor -%}
     </ul>

@@ -1,13 +1,13 @@
 <footer class="footer siteFooter">
   {% include 'img/all-seeing-pizza.svg' %}
   <a class="siteFooter__logo" href="/">
-    <img src="{{ '/assets/img/logo.svg' | url }}" alt="Spinellis Pizeria">
+    <img src="{{ '/assets/img/logo.svg' | url }}" alt="Spinellis Pizeria" width="151" height="54">
   </a>
 
   <nav class="siteFooter__nav" aria-label="Main Navigation">
     <ul class="siteFooter__list">
       <li><a href="/locations/">Locations</a></li>
-      <li><a href="javascript:;" data-micromodal-trigger="modal-menu">Menu</a></li>
+      <!-- <li><a href="javascript:;" data-micromodal-trigger="modal-menu">Menu</a></li> -->
       <li><a href="/about/">About</a></li>
       <li><a href="/contact/">Contact</a></li>
       <li><a href="/media/">Media</a></li>
@@ -22,7 +22,16 @@
 <script src="https://unpkg.com/tabbable/dist/index.umd.js"></script>
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
-<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<!-- <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script>
 MicroModal.init();
-</script>
+</script> -->
+
+{% if page.url == '/media/' %}
+  <script src="{{ '/assets/js/tobii.min.js' | url }}"></script>
+  <script>
+    const tobii = new Tobii({
+      counter: false
+    })
+  </script>
+{% endif %}

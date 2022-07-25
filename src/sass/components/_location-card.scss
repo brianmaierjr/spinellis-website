@@ -59,7 +59,11 @@
   &__cityState {
     font-size: var(--font-size-3);
     margin-bottom: var(--space-l);
-    color: darken(white, 50%);
+    color: darken(white, 25%);
+    font-family: var(--font-normal);
+    font-weight: normal;
+    text-transform: none;
+    font-style: italic;
   }
 
   &__hours {

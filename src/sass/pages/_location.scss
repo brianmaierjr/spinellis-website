@@ -54,6 +54,7 @@
   &__socialLink {
     text-decoration: none;
     display: inline-block;
+    padding-right: var(--space-3xs);
 
     &:hover,
     &:focus {
@@ -68,7 +69,8 @@
   padding-bottom: var(--space-xl);
 }
 
-.locationGallery__grid {
+.locationGallery__grid,
+.grid-photos {
 
   @include min(md) {
     display: grid;

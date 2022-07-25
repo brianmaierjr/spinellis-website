@@ -2,13 +2,34 @@
 
 .siteFooter {
   padding-top: 6rem;
+  padding-bottom: var(--space-m);
   text-align: center;
-  background-color: var(--charcoal);
-  // background-image: url(/assets/img/spinellis-handstyle.svg);
-  background-position: 50% center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  position: relative;
   color: var(--white);
+  // background-color: var(--charcoal);
+  // background-image: url(/assets/img/spinellis-handstyle-clipped.svg);
+  // background-position: bottom center;
+  // background-size: 100% auto;
+  // background-repeat: no-repeat;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--charcoal);
+    background-image: url(/assets/img/spinellis-handstyle-clipped.svg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  >*:last-child {
+    margin-bottom: 0;
+  }
 
   @include min(lg) {
     padding-top: 10rem;
