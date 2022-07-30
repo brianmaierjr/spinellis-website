@@ -74,18 +74,10 @@
     margin: 0;
     padding-bottom: var(--space-l);
 
-    @media (max-height: 40rem) {
-      line-height: .8;
-    }
-
     a {
       text-decoration: none;
       font-family: var(--font-condensed);
       text-transform: uppercase;
-
-      @media (max-height: 40rem) {
-        font-size: var(--font-size-5);
-      }
     }
   }
 }

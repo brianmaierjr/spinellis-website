@@ -28,7 +28,16 @@ title: Spinellis Pizzeria
   </div>
 </section>
 
-{% include 'locations.html' %}
+<section aria-label="Locations" class="locations grungeSection section">
+  <div class="wrapper">
+    <div class="grungeSection__content">
+      <h2 class="h1 color-red">Our Locations</h2>
+      <p>Serving 3 states, including Kentucky, Tennesee, and Arizona. Select your location below.</p>
+    </div>
+    {% include 'locations-list.html' %}
+  </div>
+</section>
+
 {% include 'mobile-app.html' %}
 {% include 'merch.html' %}
 {% include 'footer-locations.html' %}
