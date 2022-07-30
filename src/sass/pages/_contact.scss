@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .contactPage {
   background-color: var(--black);
   background-image: url(/assets/img/grunge-white.png);
@@ -68,11 +70,13 @@
       min-width: 100%;
 
       &.half-input {
-        min-width: calc(50% - 1rem);
-        max-width: calc(50% - 1rem);
+        @include min(lg) {
+          min-width: calc(50% - 1rem);
+          max-width: calc(50% - 1rem);
 
-        &:first-of-type {
-          margin-right: 2rem;
+          &:first-of-type {
+            margin-right: 2rem;
+          }
         }
       }
     }
