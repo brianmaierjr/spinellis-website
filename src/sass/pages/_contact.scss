@@ -1,5 +1,5 @@
 .contactPage {
-  background-color: black;
+  background-color: var(--black);
   background-image: url(/assets/img/grunge-white.png);
   color: var(--white);
 
@@ -49,6 +49,7 @@
       &__name {
         margin-bottom: 0;
         color: var(--red);
+        font-size: var(--font-size-3);
       }
     }
 

@@ -85,7 +85,7 @@
 	}
 
 	.wrapper {
-		* {
+		*:not(.locationGallery):not(.grid-photos):not(.grid-videos) {
 			max-width: 44rem;
 			;
 			margin-inline: auto;

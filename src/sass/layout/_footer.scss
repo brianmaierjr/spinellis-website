@@ -25,6 +25,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+
+    @include min(md) {
+      height: 75%;
+    }
   }
 
   >*:last-child {

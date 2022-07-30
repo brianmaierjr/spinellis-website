@@ -12,11 +12,19 @@
             <div class="locationCard__content">
               <h3 class="locationCard__name"><a href="{{ location.url }}">{{ location.data.name }}</a></h3>
               <h4 class="locationCard__cityState h6">{{ location.data.cityState }}</h4>
+              {% if location.data.menuUrl or location.data.orderUrl %}
               <div class="btnGroup">
-                <a class="btn btn--outline" href="{{ location.data.menuUrl }}" target="_blank">Menu<span class="srOnly"> for {{ location.data.name }}</span></a>
-                <a class="btn" href="{{ location.data.orderUrl }}" target="_blank">Order Online<span class="srOnly"> from{{ location.data.name }}</span></a>
+                {% if location.data.menuUrl %}
+                <a class="btn btn--outline" href="{{ location.data.menuUrl }}" target="_blank">Menu<span class="srOnly"> for {{ location.data.name }}. Opens in a new window</span></a>
+                {% endif %}
+                {% if location.data.orderUrl %}
+                <a class="btn" href="{{ location.data.orderUrl }}" target="_blank">Order Online<span class="srOnly"> from{{ location.data.name }}. Opens in a new window</span></a>
+                {% endif %}
               </div>
-              <p class="locationCard__hours"><a href="{{ location.data.directionsUrl }}" target="_blank">Get Directions<span class="srOnly"> to the {{ location.data.name }} Spinellis</span></a></p>
+              {% endif %}
+              {% if location.data.directionsUrl %}
+              <p class="locationCard__hours"><a href="{{ location.data.directionsUrl }}" target="_blank">Get Directions<span class="srOnly"> to the {{ location.data.name }} Spinellis. Opens in a new window</span></a></p>
+              {% endif %}
               <div class="locationCard__bg">
                 <img class="locationCard__bgImg" src="/assets/img/{{ location.data.image }}.webp" alt="{{ location.data.name }}" loading="lazy"/>
               </div>

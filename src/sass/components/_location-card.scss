@@ -10,6 +10,10 @@
   z-index: 1;
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @include min(lg) {
     // padding: 4vw 2vw;
@@ -21,7 +25,7 @@
       }
 
       .btnGroup {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }

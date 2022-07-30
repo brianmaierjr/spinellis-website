@@ -1,9 +1,13 @@
 @use '../abstracts' as *;
 
 .mediaPage {
-  background-color: black;
+  background-color: var(--black);
   background-image: url(/assets/img/grunge-white.png);
   color: var(--white);
+
+  .grungeSection {
+    padding-bottom: var(--space-xl);
+  }
 }
 
 .hero--media {

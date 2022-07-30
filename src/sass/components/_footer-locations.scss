@@ -19,7 +19,7 @@
     background-size: 101% auto;
     z-index: -1;
     padding-top: 8%;
-    top: calc(100% - 1px); 
+    top: calc(100% - 1px);
     background-image: url(/assets/img/border-white-bottom.svg);
     background-position: top;
     width: 100%;
@@ -48,7 +48,7 @@
     width: 100%;
     left: 0;
   }
-    
+
   a::after {
     content: attr(data-replace);
     height: 100%;
@@ -58,17 +58,17 @@
     transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
     color: var(--red);
   }
-  
+
   a:hover::after,
   a:focus::after {
     transform: translate3d(0, 0, 0);
   }
-  
+
   a span {
     display: inline-block;
     transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
   }
-  
+
   a:hover span,
   a:focus span {
     transform: translate3d(0, -200%, 0);
@@ -78,7 +78,7 @@
     padding-left: 0;
     list-style-type: none;
   }
-  
+
   &__navItem {
     display: inline;
   }

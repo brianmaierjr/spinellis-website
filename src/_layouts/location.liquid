@@ -29,10 +29,19 @@ title: My Rad Blog
       <div class="hero__content">
         <h1>{{ name }}</h1>
         <h2 class="h6">{{ cityState }}</h2>
+        {% if menuUrl or orderUrl %}
         <div class="btnGroup">
-          <a class="btn btn--outline" href="{{ menuUrl }}">Menu<span class="srOnly"> for {{ name }}</span></a>
-          <a class="btn" href="{{ orderUrl }}">Order Online<span class="srOnly"> from {{ name }}</span></a>
+          {% if menuUrl %}
+          <a class="btn btn--outline" href="{{ menuUrl }}" target="_blank">Menu<span class="srOnly"> for {{ name }}. Opens in a new window</span></a>
+          {% endif %}
+          {% if orderUrl %}
+          <a class="btn" href="{{ orderUrl }}" target="_blank">Order Online<span class="srOnly"> from{{ name }}. Opens in a new window</span></a>
+          {% endif %}
         </div>
+        {% endif %}
+        {% if name == "Food Truck" %}
+        <a class="btn" href="mailto:chinasoper@gmail.com?subject=Food Truck Booking" target="_blank">Contact Us to Book</a>
+        {% endif %}
       </div>
       <div class="hero__bg">
         <img class="hero__bgImg" src="/assets/img/{{ image }}.webp" alt="{{ name }}" loading="lazy" />
@@ -45,15 +54,23 @@ title: My Rad Blog
         <div class="locationInfo__item">
           <h2 class="h6 locationInfo__heading">Location</h2>
           <p>
+            {% if street %}
             {{ street }}<br>
+            {% endif %}
+            {% if cityState %}
             {{ cityState }}<br>
-            <a href="{{ directionsUrl }}">Directions<span class="srOnly"> to Spinellis {{ name }}</span></a>
+            {% endif %}
+            {% if directionsUrl %}
+            <a href="{{ directionsUrl }}">Directions<span class="srOnly"> to Spinellis {{ name }}. Opens in a new window</span></a>
+            {% endif %}
           </p>
         </div>
+        {% if hours %}
         <div class="locationInfo__item">
           <h2 class="h6 locationInfo__heading">Hours<span class="srOnly"> for Spinellis {{ name }}</span></h2>
           <p>{{ hours }}</p>
         </div>
+        {% endif %}
         <div class="locationInfo__item">
           <h2 class="h6 locationInfo__heading">Phone</h2>
           <p><a href="tel:{{ phone }}"><span class="srOnly"> for Spinellis {{ name }}</span>{{ phone }}</a></p>
@@ -61,8 +78,8 @@ title: My Rad Blog
         <div class="locationInfo__item">
           <h2 class="h6 locationInfo__heading">Social<span class="srOnly"> for Spinellis {{ name }}</span></h2>
           {% for socialLink in social %}
-          <a class="locationInfo__socialLink" href="{{ socialLink.url }}" target="" _blank"><span class="srOnly">{{
-              metadata.title }} on {{ socialLink.name }}</span>{% include 'img/icon-social-{{ socialLink.name }}.svg'
+          <a class="locationInfo__socialLink" href="{{ socialLink.url }}" target="_blank"><span class="srOnly">{{
+              metadata.title }} {{ name}} on {{ socialLink.name }}</span>{% include 'img/icon-social-{{ socialLink.name }}.svg'
             %}</a>
           {% endfor %}
         </div>
@@ -75,15 +92,18 @@ title: My Rad Blog
           {{ content }}
         </div>
 
+        {% if gallery %}
         <div class="locationGallery">
           <h2 class="color-red align-center">Gallery</h2>
           <div class="locationGallery__grid grid-photos">
             {% for image in gallery %}
-            <img class="locationGallery__gridItem" src="/assets/img/{{ image.src }}" alt="{{ image.alt }}"
-              loading="lazy">
+            <a href="/assets/img/{{ image.src }}" class="lightbox" alt="{{ image.alt }}" data-group="photos">
+              <img src="/assets/img/{{ image.src }}" alt="" loading="lazy">
+            </a>
             {% endfor %}
           </div>
         </div>
+        {% endif %}
       </div>
     </section>
 

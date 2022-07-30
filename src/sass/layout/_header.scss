@@ -104,6 +104,7 @@
           text-decoration: none;
 
           @include min(lg) {
+            color: darken(white, 30%);
             overflow: hidden;
             position: relative;
             display: inline-block;

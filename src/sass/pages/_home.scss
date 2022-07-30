@@ -18,9 +18,9 @@
 
     @include min(lg) {
       align-items: center;
-			justify-content: center;
-			margin-bottom: var(--space-3xl);
-			min-height: 90vh;
+      justify-content: center;
+      margin-bottom: var(--space-3xl);
+      min-height: 90vh;
     }
   }
 
@@ -40,7 +40,7 @@
       grid-column-start: 1;
       grid-column-end: -1;
       grid-row-start: 1;
-      margin-top: 0; 
+      margin-top: 0;
       background-color: transparent;
     }
 
@@ -79,7 +79,7 @@
     video {
       width: 100%;
       height: auto;
-      
+
       @include min(lg) {
         width: 100%;
         height: 100%;
@@ -97,7 +97,7 @@
     // filter: drop-shadow(0 0 .5rem var(--red));
     width: 10rem;
     height: auto;
-    
+
     @include min(lg) {
       width: 20rem;
     }

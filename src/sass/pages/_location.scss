@@ -27,14 +27,14 @@
 }
 
 .locationInfo {
-  background-color: var(--black);
+  background-color: var(--red);
   color: var(--white);
   padding: var(--space-xl);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-l);
   transform: translateY(-6rem);
-  width: min(100% - var(--space-l), 80rem);
+  width: min(100% - var(--space-l-2xl), 80rem);
 
   @include min(md) {
     transform: translateY(-50%);
@@ -77,9 +77,18 @@
     gap: var(--space-l);
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    max-width: 100%;
   }
 
   @include min(lg) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  img {
+    width: 100%;
+
+    @include max(md) {
+      margin-bottom: var(--space-s);
+    }
   }
 }

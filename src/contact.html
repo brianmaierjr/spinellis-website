@@ -17,11 +17,19 @@ bodyClass: 'contactPage'
       <div class="contact-us-locations">
         {%- for location in collections.location -%}
           <div class="contact-us-location">
-            <h2 class="h5 contact-us-location__name">{{ location.data.name }}</h2>
+            <h2 class="contact-us-location__name">{{ location.data.name }}</h2>
+            {% if location.data.street %}
             <p>{{ location.data.street }}<br>
+            {% endif %}
+            {% if location.data.cityState or location.data.zip %}
             {{ location.data.cityState }} {{ location.data.zip }}<br>
+            {% endif %}
+            {% if location.data.directionsUrl %}
             <a href="{{ location.data.directionsUrl }}" target="_blank">Get Directions<span class="srOnly"> to {{ location.data.name }}</span></a><br><br>
+            {% endif %}
+            {% if location.data.phone %}
             <a href="tel:{{ location.data.phone }}"><span class="srOnly">Call Spinellis {{ location.data.name }} at </span>{{ location.data.phone }}</a></p>
+            {% endif %}
           </div>
         {%- endfor -%}
       </div> 
