@@ -49,15 +49,24 @@
       // font-size: 3.12rem;
       font-size: var(--space-xl-3xl);
 
+      @include max(lg) {
+        br {
+          display: none;
+        }
+      }
+
       @include min(lg) {
         // margin-bottom: var(--space-l);
         // font-size: 6rem;
       }
 
       span {
-        display: inline-block;
         background-color: var(--black);
-        padding: 0 .25em .1em;
+
+        @include min(lg) {
+          display: inline-block;
+          padding: 0 .25em .1em;
+        }
       }
     }
 
