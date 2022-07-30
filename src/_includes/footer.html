@@ -21,9 +21,15 @@
 <script src="https://unpkg.com/tabbable/dist/index.umd.js"></script>
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
+
+
+{% if page.url == "/media/"  or page.url contains "/location/" %}
+  Test
 <script src="{{ '/assets/js/tobii.min.js' | url }}"></script>
 <script>
   const tobii = new Tobii({
-    counter: false
+    counter: false,
+    captions: false
   })
 </script>
+{% endif %}

@@ -91,14 +91,13 @@ title: My Rad Blog
           <h2 class="color-red align-center">About this location</h2>
           {{ content }}
         </div>
-
         {% if gallery %}
         <div class="locationGallery">
           <h2 class="color-red align-center">Gallery</h2>
           <div class="locationGallery__grid grid-photos">
             {% for image in gallery %}
-            <a href="/assets/img/{{ image.src }}" class="lightbox" alt="{{ image.alt }}" data-group="photos">
-              <img src="/assets/img/{{ image.src }}" alt="" loading="lazy">
+            <a href="/assets/img/{{ image.src }}" class="lightbox" data-group="photos">
+              <img src="/assets/img/{{ image.src }}" alt="{{ image.alt }}" loading="lazy">
             </a>
             {% endfor %}
           </div>
