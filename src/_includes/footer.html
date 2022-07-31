@@ -5,6 +5,7 @@
 
   <nav class="siteFooter__nav" aria-label="Main Navigation">
     <ul class="siteFooter__list">
+      <li><a href="/">Home</a></li>
       <li><a href="/locations/">Locations</a></li>
       <!-- <li><a href="javascript:;" data-micromodal-trigger="modal-menu">Menu</a></li> -->
       <li><a href="/about/">About</a></li>
@@ -22,14 +23,13 @@
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
 
-
+<!-- Only use on pages that need it -->
 {% if page.url == "/media/"  or page.url contains "/location/" %}
-  Test
-<script src="{{ '/assets/js/tobii.min.js' | url }}"></script>
-<script>
-  const tobii = new Tobii({
-    counter: false,
-    captions: false
-  })
-</script>
+  <script src="{{ '/assets/js/tobii.min.js' | url }}"></script>
+  <script>
+    const tobii = new Tobii({
+      counter: false,
+      captions: false
+    })
+  </script>
 {% endif %}

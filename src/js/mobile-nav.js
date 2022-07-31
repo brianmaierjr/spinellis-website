@@ -39,7 +39,3 @@ document
 document
   .getElementById('menuTriggerClose')
   .addEventListener('click', trap.deactivate);
-
-document
-  .querySelector('.mobileNav__menuLink')
-  .addEventListener('click', trap.deactivate);
