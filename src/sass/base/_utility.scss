@@ -15,12 +15,14 @@
 .grungeBg {
   background-color: var(--white);
   background-image: url(/assets/img/grunge-black.png);
+  background-image: url(/assets/img/grunge-black.webp);
   color: var(--black);
 }
 
 .grungeBg--dark {
   background-color: var(--black);
   background-image: url(/assets/img/grunge-white.png);
+  background-image: url(/assets/img/grunge-white.webp);
   color: var(--white);
 }
 
