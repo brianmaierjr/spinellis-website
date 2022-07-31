@@ -16,6 +16,10 @@
     grid-auto-rows: auto;
     flex-direction: column-reverse;
 
+    @include max(lg) {
+      gap: 0;
+    }
+
     @include min(lg) {
       align-items: center;
       justify-content: center;
@@ -31,12 +35,12 @@
     grid-column-end: -1;
     grid-row: 2;
     padding: var(--space-s);
-    background-color: var(--black);
-    margin-top: calc(var(--space-2xl) * -1);
+    // margin-top: calc(var(--space-2xl) * -1);
     // margin-left: var(--space-l);
     // margin-right: var(--space-l);
 
     @include min(lg) {
+      background-color: var(--black);
       grid-column-start: 1;
       grid-column-end: -1;
       grid-row-start: 1;

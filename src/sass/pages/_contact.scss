@@ -70,7 +70,7 @@
       min-width: 100%;
 
       &.half-input {
-        @include min(lg) {
+        @include min(md) {
           min-width: calc(50% - 1rem);
           max-width: calc(50% - 1rem);
 
