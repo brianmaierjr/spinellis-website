@@ -16,9 +16,12 @@
     </ul>
   </nav>
 
-  <p class="siteFooter__copyright">&copy;<script type="text/javascript"> document.write(new Date().getFullYear()); </script> Spinellis Pizza. Website design and development by <a href="https://brianmaierjr.com" target="_blank"><span class="srOnly">Website design and development by </span>Brian Maier Jr. <span class="srOnly">opens in a new window</span></a></p>
+  <p class="siteFooter__copyright">&copy;<span id="current-year"></span> Spinellis Pizza. Website design and development by <a href="https://brianmaierjr.com" target="_blank"><span class="srOnly">Website design and development by </span>Brian Maier Jr. <span class="srOnly">opens in a new window</span></a></p>
 </footer>
 
+<script>
+document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
 <script src="https://unpkg.com/tabbable/dist/index.umd.min.js"></script>
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.min.js"></script>
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
