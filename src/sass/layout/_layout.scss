@@ -77,7 +77,7 @@
 	.bodyText__hero {
 		img {
 			width: 100%;
-			max-width: 85rem;
+			max-width: 85rem !important;
 			margin-inline: auto;
 			margin-bottom: var(--space-l);
 			height: auto;
@@ -85,7 +85,7 @@
 	}
 
 	.wrapper {
-		*:not(.locationGallery):not(.grid-photos):not(.grid-videos) {
+		*:not(.locationGallery):not(.grid-photos):not(.grid-videos):not(.bodyText__hero) {
 			max-width: 44rem;
 			;
 			margin-inline: auto;
