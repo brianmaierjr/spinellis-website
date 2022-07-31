@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:sass && eleventy",
-    "build:sass": "sass --no-source-map src/sass:_site/assets/css",
+    "build:sass": "sass --no-source-map src/sass:_site/assets/css --style=compressed",
     "start": "npm-run-all build:sass --parallel watch:*",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "sass --no-source-map --watch src/sass:_site/assets/css"
