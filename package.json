@@ -22,6 +22,7 @@
 		"sass": "^1.49.9"
 	},
 	"dependencies": {
-		"focus-trap": "^6.9.4"
+		"focus-trap": "^6.9.4",
+		"gsap": "^3.11.4"
 	}
 }

@@ -16,8 +16,19 @@
 	}
 
 	&__logo {
+		width: 8em;
+		height: auto;
+
 		@include min(lg) {
-			// margin-right: var(--space-xl);
+			width: 10em;
+		}
+
+		img {
+			display: none;
+
+			&.active {
+				display: block;
+			}
 		}
 	}
 

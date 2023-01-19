@@ -35,7 +35,9 @@
 					<span class="srOnly">opens in a new window</span></a
 				>
 			</li>
+			L {% comment %}
 		</ul>
+		{% endcomment %}
 	</nav>
 
 	<p class="siteFooter__copyright">
@@ -54,13 +56,18 @@
 </script>
 <script src="https://unpkg.com/tabbable/dist/index.umd.min.js"></script>
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.min.js"></script>
+<script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
+
+{% comment %} GSAP {% endcomment %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
 {% comment %}
 <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script>
 	MicroModal.init();
 </script>
 {% endcomment %}
-<script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
 
 <!-- Only use on pages that need it -->
 {% comment %} {% if page.url == "/media/" or page.url contains "/location/" %}
@@ -72,3 +79,35 @@
 	});
 </script>
 {% endif %} {% endcomment %}
+
+<!-- Logo Animation -->
+<script>
+	const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+	if (mediaQuery.matches) {
+		// Do nothing
+	} else {
+		var tid = setInterval(mycode, 400);
+		function mycode() {
+			const currentLogo = document.querySelector(
+				".siteHeader__logo img.active"
+			);
+			const nextLogo = document.querySelector(
+				".siteHeader__logo img.active + img"
+			);
+
+			if (!nextLogo) {
+				document
+					.querySelector(".siteHeader__logo img:first-child")
+					.classList.add("active");
+				currentLogo.classList.remove("active");
+			} else {
+				nextLogo.classList.add("active");
+				currentLogo.classList.remove("active");
+			}
+		}
+		function abortTimer() {
+			// to be called when you want to stop the timer
+			clearInterval(tid);
+		}
+	}
+</script>
