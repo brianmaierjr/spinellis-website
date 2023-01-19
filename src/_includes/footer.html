@@ -1,38 +1,74 @@
 <footer class="footer siteFooter">
-  <a class="siteFooter__logo" href="/">
-    <img src="{{ '/assets/img/logo.svg' | url }}" alt="Spinellis Pizeria" width="151" height="54">
-  </a>
+	<a class="siteFooter__logo" href="/">
+		<img
+			src="{{ '/assets/img/logo.svg' | url }}"
+			alt="Spinellis Pizeria"
+			width="151"
+			height="54"
+		/>
+	</a>
 
-  <nav class="siteFooter__nav" aria-label="Main Navigation">
-    <ul class="siteFooter__list">
-      <li><a href="/">Home</a></li>
-      <li><a href="/locations/">Locations</a></li>
-      <!-- <li><a href="javascript:;" data-micromodal-trigger="modal-menu">Menu</a></li> -->
-      <li><a href="/about/">About</a></li>
-      <li><a href="/contact/">Contact</a></li>
-      <li><a href="/media/">Media</a></li>
-      <li><a href="https://spinellispizza.bigcartel.com/" target="_blank">Merch <span class="srOnly">opens in a new window</span></a></li>
-      <li><a href="https://order.spinellispizzeria.com/" target="_blank">Order Online <span class="srOnly">opens in a new window</span></a></li>
-    </ul>
-  </nav>
+	<nav class="siteFooter__nav" aria-label="Main Navigation">
+		<ul class="siteFooter__list">
+			<li><a href="/">Home</a></li>
+			<li><a href="#locations">Locations</a></li>
+			{% comment %}
+			<li>
+				<a href="javascript:;" data-micromodal-trigger="modal-menu"
+					>Menu</a
+				>
+			</li>
+			{% endcomment %}
+			<!-- <li><a href="/about/">About</a></li> -->
+			<li><a href="/contact/">Contact</a></li>
+			{% comment %}
+			<li><a href="/media/">Media</a></li>
+			{% endcomment %}
+			<li>
+				<a href="https://spinellispizza.bigcartel.com/" target="_blank"
+					>Merch <span class="srOnly">opens in a new window</span></a
+				>
+			</li>
+			<li>
+				<a href="https://order.spinellispizzeria.com/" target="_blank"
+					>Order Online
+					<span class="srOnly">opens in a new window</span></a
+				>
+			</li>
+		</ul>
+	</nav>
 
-  <p class="siteFooter__copyright">&copy;<span id="current-year"></span> Spinellis Pizza. Website design and development by <a href="https://brianmaierjr.com" target="_blank"><span class="srOnly">Website design and development by </span>Brian Maier Jr. <span class="srOnly">opens in a new window</span></a></p>
+	<p class="siteFooter__copyright">
+		&copy;<span id="current-year"></span> Spinellis Pizza. Website design
+		and development by
+		<a href="https://brianmaierjr.com" target="_blank"
+			><span class="srOnly">Website design and development by </span>Brian
+			Maier Jr. <span class="srOnly">opens in a new window</span></a
+		>
+	</p>
 </footer>
 
 <script>
-document.getElementById("current-year").innerHTML = new Date().getFullYear();
+	document.getElementById("current-year").innerHTML =
+		new Date().getFullYear();
 </script>
 <script src="https://unpkg.com/tabbable/dist/index.umd.min.js"></script>
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.min.js"></script>
+{% comment %}
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script>
+	MicroModal.init();
+</script>
+{% endcomment %}
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
 
 <!-- Only use on pages that need it -->
-{% if page.url == "/media/"  or page.url contains "/location/" %}
-  <script src="{{ '/assets/js/tobii.min.js' | url }}"></script>
-  <script>
-    const tobii = new Tobii({
-      counter: false,
-      captions: false
-    })
-  </script>
-{% endif %}
+{% comment %} {% if page.url == "/media/" or page.url contains "/location/" %}
+<script src="{{ '/assets/js/tobii.min.js' | url }}"></script>
+<script>
+	const tobii = new Tobii({
+		counter: false,
+		captions: false,
+	});
+</script>
+{% endif %} {% endcomment %}

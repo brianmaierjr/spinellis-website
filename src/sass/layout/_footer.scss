@@ -1,94 +1,94 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .siteFooter {
-  padding-top: 6rem;
-  padding-bottom: var(--space-m);
-  text-align: center;
-  position: relative;
-  color: var(--white);
-  // background-color: var(--charcoal);
-  // background-image: url(/assets/img/spinellis-handstyle-clipped.svg);
-  // background-position: bottom center;
-  // background-size: 100% auto;
-  // background-repeat: no-repeat;
+	padding-top: 6rem;
+	padding-bottom: var(--space-m);
+	text-align: center;
+	position: relative;
+	color: var(--white);
+	// background-color: var(--charcoal);
+	// background-image: url(/assets/img/spinellis-handstyle-clipped.svg);
+	// background-position: bottom center;
+	// background-size: 100% auto;
+	// background-repeat: no-repeat;
 
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-color: var(--charcoal);
-    background-image: url(/assets/img/spinellis-handstyle-clipped.svg);
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		background-color: var(--charcoal);
+		background-image: url(/assets/img/spinellis-handstyle-clipped.svg);
+		background-position: top center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: -1;
+		opacity: 0.3;
 
-    @include min(md) {
-      height: 75%;
-    }
-  }
+		@include min(md) {
+			height: 75%;
+		}
+	}
 
-  >*:last-child {
-    margin-bottom: 0;
-  }
+	> *:last-child {
+		margin-bottom: 0;
+	}
 
-  @include min(lg) {
-    padding-top: 10rem;
-    padding-bottom: var(--space-l);
-  }
+	@include min(lg) {
+		padding-top: 10rem;
+		padding-bottom: var(--space-l);
+	}
 }
 
 .siteFooter__nav {
-  padding-left: var(--space-l);
-  padding-right: var(--space-l);
-  margin-bottom: var(--space-l);
+	padding-left: var(--space-l);
+	padding-right: var(--space-l);
+	margin-bottom: var(--space-l);
 }
 
 .siteFooter__copyright {
-  padding-left: var(--space-l);
-  padding-right: var(--space-l);
+	padding-left: var(--space-l);
+	padding-right: var(--space-l);
 }
 
 .siteFooter__logo {
-  img {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: var(--space-l);
-  }
+	img {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: var(--space-l);
+	}
 }
 
 .siteFooter__nav {
+	ul {
+		padding-left: 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 
-  ul {
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+	li {
+		list-style-type: none;
+		padding: var(--space-3xs) var(--space-s);
 
-  li {
-    list-style-type: none;
-    padding: var(--space-3xs) var(--space-s);
+		a {
+			text-decoration: none;
+			font-size: var(--font-size-2);
+			text-transform: uppercase;
 
-    a {
-      text-decoration: none;
-      font-size: var(--font-size-2);
-      text-transform: uppercase;
-
-      &:hover,
-      &:focus {
-        color: var(--white);
-        text-decoration: underline;
-      }
-    }
-  }
+			&:hover,
+			&:focus {
+				color: var(--white);
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 .siteFooter__eye {
-  max-width: 10rem;
-  height: auto;
-  fill: white;
+	max-width: 10rem;
+	height: auto;
+	fill: white;
 }

@@ -1,43 +1,65 @@
 ---
-layout: 'default.liquid'
+layout: "default.liquid"
 title: Spinellis Pizzeria
 ---
 
 <section class="hero hero--home">
-  <div class="hero__wrapper grid-16 wrapper wrapper--fullWidth">
-    <div class="hero__text">
-      <h1>
-        <span>PIZZA. SANDWICHES.</span><br/>
-        <span>ALL OF YOUR</span><br/>
-        <span>LATE NIGHT CRAVINGS.</span>
-      </h1>
-      <a class="btn" href="/order">
-        <span class="btn__icon">
-          {% include 'img/icon-pizza.svg' %}
-        </span>      
-        Order Online
-      </a>
-    </div>
-    <div class="hero__video">
-      <video autoplay loop muted playsinline poster="/assets/img/video-thumb.jpg">
-        <source src="/assets/img/spinellis-teaser-optimized.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      </div>
-      <img class="neon" src="/assets/img/neon-pizza.webp" alt="" loading="lazy" width="320" height="309">
-  </div>
+	<div class="hero__wrapper grid-16 wrapper wrapper--fullWidth">
+		<div class="hero__text">
+			<h1>
+				<span>PIZZA. SANDWICHES.</span><br />
+				<span>ALL OF YOUR</span><br />
+				<span>LATE NIGHT CRAVINGS.</span>
+			</h1>
+			<a class="btn" href="https://order.spinellispizzeria.com">
+				<span class="btn__icon">
+					{% include 'img/icon-pizza.svg' %}
+				</span>
+				Order Online
+			</a>
+		</div>
+		<div class="hero__video">
+			<video
+				autoplay
+				loop
+				muted
+				playsinline
+				poster="/assets/img/video-thumb.jpg"
+			>
+				<source
+					src="/assets/img/spinellis-teaser-optimized.mp4"
+					type="video/mp4"
+				/>
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<img
+			class="neon"
+			src="/assets/img/neon-pizza.webp"
+			alt=""
+			loading="lazy"
+			width="320"
+			height="309"
+		/>
+	</div>
 </section>
 
-<section aria-label="Locations" class="locations grungeSection section">
-  <div class="wrapper">
-    <div class="grungeSection__content">
-      <h2 class="h1 color-red">Our Locations</h2>
-      <p>Serving 3 states, including Kentucky, Tennesee, and Arizona. Select your location below.</p>
-    </div>
-    {% include 'locations-list.html' %}
-  </div>
+<section
+	id="locations"
+	aria-label="Locations"
+	class="locations grungeSection section"
+>
+	<div class="wrapper">
+		<div class="grungeSection__content">
+			<h2 class="h1 color-red">Our Locations</h2>
+			<p>
+				Serving 3 states, including Kentucky, Tennesee, and Arizona.
+				View menu, directions, and hours below.
+			</p>
+		</div>
+		{% include 'locations-list.html' %}
+	</div>
 </section>
 
-{% include 'mobile-app.html' %}
-{% include 'merch.html' %}
-{% include 'footer-locations.html' %}
+{% include 'mobile-app.html' %} {% include 'merch.html' %} {% comment %} {%
+include 'footer-locations.html' %} {% endcomment %}

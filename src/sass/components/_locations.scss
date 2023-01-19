@@ -1,32 +1,33 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .locations {
+	h2 {
+		margin-bottom: 0;
+	}
 
-  h2 {
-    margin-bottom: 0;
-  }
+	&__list {
+		margin-top: var(--space-l-2xl);
 
-  &__list {
-    margin-top: var(--space-l-2xl);
+		@include min(lg) {
+			display: grid !important;
+			grid-template-columns: 1fr 1fr;
+			gap: var(--space-l);
+		}
+	}
 
-    @include min(lg) {
-      display: grid !important;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-l);
-    }
-  }
+	.locationCard {
+		margin-bottom: var(--space-l);
+		// grid-column: 1 / -1;
 
-  .locationCard {
-    margin-bottom: var(--space-l);
+		@include min(lg) {
+			margin-bottom: 0;
+		}
 
-    @include min(lg) {
-      margin-bottom: 0;
-    }
-
-    &:first-child {
-      @include min(lg) {
-        grid-column: 1 / -1;
-      }
-    }
-  }
+		&:first-child {
+			@include min(lg) {
+				aspect-ratio: 16/5;
+				grid-column: 1 / -1;
+			}
+		}
+	}
 }

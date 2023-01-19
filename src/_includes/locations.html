@@ -1,38 +1,76 @@
 <section aria-label="Locations" class="locations grungeSection section">
-  <div class="wrapper">
-    <div class="grungeSection__content">
-      <h2 class="h1 color-red">Our Locations</h2>
-      <p>Serving 3 states, including Kentucky, Tennesee, and Arizona. Select your location below.</p>
-    </div>
-    <div class="splide">
-      <div class="splide__track">
-        <div class="locations__list splide__list">
-          {%- for location in collections.location -%}
-          <div class="locationCard splide__slide">
-            <div class="locationCard__content">
-              <h3 class="locationCard__name"><a href="{{ location.url }}">{{ location.data.name }}</a></h3>
-              <h4 class="locationCard__cityState h6">{{ location.data.cityState }}</h4>
-              {% if location.data.menuUrl or location.data.orderUrl %}
-              <div class="btnGroup">
-                {% if location.data.menuUrl %}
-                <a class="btn btn--outline" href="{{ location.data.menuUrl }}" target="_blank">Menu<span class="srOnly"> for {{ location.data.name }}. Opens in a new window</span></a>
-                {% endif %}
-                {% if location.data.orderUrl %}
-                <a class="btn" href="{{ location.data.orderUrl }}" target="_blank">Order Online<span class="srOnly"> from{{ location.data.name }}. Opens in a new window</span></a>
-                {% endif %}
-              </div>
-              {% endif %}
-              {% if location.data.directionsUrl %}
-              <p class="locationCard__hours"><a href="{{ location.data.directionsUrl }}" target="_blank">Get Directions<span class="srOnly"> to the {{ location.data.name }} Spinellis. Opens in a new window</span></a></p>
-              {% endif %}
-              <div class="locationCard__bg">
-                <img class="locationCard__bgImg" src="/assets/img/{{ location.data.image }}.webp" alt="{{ location.data.name }}" loading="lazy"/>
-              </div>
-            </div>
-          </div>
-          {%- endfor -%}        
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="wrapper">
+		<div class="grungeSection__content">
+			<h2 class="h1 color-red">Our Locations</h2>
+			<p>
+				Serving 3 states, including Kentucky, Tennesee, and Arizona.
+				Select your location below.
+			</p>
+		</div>
+		<div class="splide">
+			<div class="splide__track">
+				<div class="locations__list splide__list">
+					{%- for location in collections.location -%}
+					<div class="locationCard splide__slide">
+						<div class="locationCard__content">
+							<h3 class="locationCard__name">
+								<a href="{{ location.url }}"
+									>{{ location.data.name }}</a
+								>
+							</h3>
+							<h4 class="locationCard__cityState h6">
+								{{ location.data.cityState }}
+							</h4>
+							{% if location.data.menuUrl or
+							location.data.orderUrl %}
+							<div class="btnGroup">
+								{% if location.data.menuUrl %}
+								<a
+									class="btn btn--outline"
+									href="{{ location.data.menuUrl }}"
+									target="_blank"
+									>Menu<span class="srOnly">
+										for {{ location.data.name }}. Opens in a
+										new window</span
+									></a
+								>
+								{% endif %} {% if location.data.orderUrl %}
+								<a
+									class="btn"
+									href="{{ location.data.orderUrl }}"
+									target="_blank"
+									>Order Online<span class="srOnly">
+										from{{ location.data.name }}. Opens in a
+										new window</span
+									></a
+								>
+								{% endif %}
+							</div>
+							{% endif %} {% if location.data.directionsUrl %}
+							<p class="locationCard__hours">
+								<a
+									href="{{ location.data.directionsUrl }}"
+									target="_blank"
+									>Get Directions<span class="srOnly">
+										to the {{ location.data.name }}
+										Spinellis. Opens in a new window</span
+									></a
+								>
+							</p>
+							{% endif %}
+							<div class="locationCard__bg">
+								<img
+									class="locationCard__bgImg"
+									src="/assets/img/{{ location.data.image }}.webp"
+									alt="{{ location.data.name }}"
+									loading="lazy"
+								/>
+							</div>
+						</div>
+					</div>
+					{%- endfor -%}
+				</div>
+			</div>
+		</div>
+	</div>
 </section>

@@ -2,22 +2,17 @@
 title: My Rad Blog
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	{% include 'head.html' %}
 
-{% include 'head.html' %}
+	<body class="{{ bodyClass }}">
+		{% include 'skip-to-link.html' %} {% include 'header.html' %}
 
-<body class="{{ bodyClass }}">
+		<main id="main">
+			{{ content }}
+		</main>
 
-  {% include 'skip-to-link.html' %}
-  {% include 'header.html' %}
-  
-  <main id="main">
-    {{ content }}
-  </main>
-
-  {% include 'footer.html' %}
-
-</body>
-
+		{% include 'footer.html' %} {% include 'modal-menu.html' %}
+	</body>
 </html>

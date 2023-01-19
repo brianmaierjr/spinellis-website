@@ -1,61 +1,107 @@
 <header class="siteHeader">
-    <a class="siteHeader__mobileOrderBtn btn" href="https://order.spinellispizzeria.com/" target="_blank">
-      <span class="btn__icon">
-        {% include 'img/icon-pizza.svg' %}
-      </span>
-      Order Online
-    </a>
-  <div class="siteHeader__wrapper wrapper">
-    <a class="siteHeader__logo" href="/">
-      <img src="/assets/img/logo.svg" alt="Spinellis Pizzeria Homepage" width="151" height="54">
-    </a>
-    <button type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mobileNav" id="menuTrigger" class="siteHeader__mobileNavTrigger btn btn--outline">
-      <span class="btn__icon">
-        {% include 'img/icon-menu.svg' %}
-      </span>
-      Menu
-    </button>
-    <nav class="siteHeader__mainNav" aria-label="Main Navigation">
-      <ul>
-        <li class="siteHeader__mainNavItem">
-          <a class="main-nav__link" href="/locations/" data-replace="Locations"><span>Locations</span></a>
-        </li>
-        <!-- <li class="siteHeader__mainNavItem">
-          <a class="main-nav__link" href="javascript:;" data-replace="Menu" data-micromodal-trigger="modal-menu"><span>Menu</span></a>
-        </li> -->
-        <li class="siteHeader__mainNavItem"> 
-          <a class="main-nav__link" href="/about/" data-replace="About"><span>About</span></a>
-        </li>
-        <li class="siteHeader__mainNavItem"> 
-          <a class="main-nav__link" href="/media/" data-replace="Media"><span>Media</span></a>
-        </li>
-        <li class="siteHeader__mainNavItem"> 
-          <a class="main-nav__link" href="/contact/" data-replace="Contact"><span>Contact</span></a>
-        </li>                
-        <!-- <li class="siteHeader__mainNavItem siteHeader__mainNavItem--hasChildren">
+	<a
+		class="siteHeader__mobileOrderBtn btn"
+		href="https://order.spinellispizzeria.com/"
+		target="_blank"
+	>
+		<span class="btn__icon"> {% include 'img/icon-pizza.svg' %} </span>
+		Order Online
+	</a>
+	<div class="siteHeader__wrapper wrapper">
+		<a class="siteHeader__logo" href="/">
+			<img
+				src="/assets/img/logo.svg"
+				alt="Spinellis Pizzeria Homepage"
+				width="151"
+				height="54"
+			/>
+		</a>
+		<button
+			type="button"
+			aria-haspopup="true"
+			aria-expanded="false"
+			aria-controls="mobileNav"
+			id="menuTrigger"
+			class="siteHeader__mobileNavTrigger btn btn--outline"
+		>
+			<span class="btn__icon"> {% include 'img/icon-menu.svg' %} </span>
+			Menu
+		</button>
+		<nav class="siteHeader__mainNav" aria-label="Main Navigation">
+			<ul>
+				<li class="siteHeader__mainNavItem">
+					<a
+						class="main-nav__link"
+						href="#locations"
+						data-replace="Locations"
+						><span>Locations</span></a
+					>
+				</li>
+				<!-- <li class="siteHeader__mainNavItem">
+					<a
+						class="main-nav__link"
+						href="javascript:;"
+						data-replace="Menu"
+						data-micromodal-trigger="modal-menu"
+						><span>Menu</span></a
+					>
+				</li> -->
+				<!-- <li class="siteHeader__mainNavItem">
+					<a
+						class="main-nav__link"
+						href="/about/"
+						data-replace="About"
+						><span>About</span></a
+					>
+				</li> -->
+				<li class="siteHeader__mainNavItem">
+					<a
+						class="main-nav__link"
+						href="/contact/"
+						data-replace="Contact"
+						><span>Contact</span></a
+					>
+				</li>
+				<!-- <li class="siteHeader__mainNavItem">
+					<a
+						class="main-nav__link"
+						href="/media/"
+						data-replace="Media"
+						><span>Media</span></a
+					>
+				</li> -->
+				<!-- <li class="siteHeader__mainNavItem siteHeader__mainNavItem--hasChildren">
           <a class="siteHeader__mainNavLink disabledLink" href="javascript:void(0)" data-replace="More +"><span>More +</span></a>
           <ul class="siteHeader__subNav">
             <li><a href="/media/">Media</a></li>
             <li><a href="/contact/">Contact</a></li>
           </ul>
         </li> -->
-      </ul>
-    </nav>
-    <div class="btnGroup">
-      <a class="btn btn--outline" href="https://spinellispizza.bigcartel.com/" target="_blank">
-        <span class="btn__icon">
-          {% include 'img/icon-shirt.svg' %}
-        </span>      
-        Shop Merch <span class="srOnly">opens in a new window</span>
-      </a>
-      <a class="btn" href="https://order.spinellispizzeria.com/" target="_blank">
-        <span class="btn__icon">
-          {% include 'img/icon-pizza.svg' %}
-        </span>      
-        Order Online <span class="srOnly">opens in a new window</span>
-      </a>
-    </div>
-  </div>
+			</ul>
+		</nav>
+		<div class="btnGroup">
+			<a
+				class="btn btn--outline"
+				href="https://spinellispizza.bigcartel.com/"
+				target="_blank"
+			>
+				<span class="btn__icon">
+					{% include 'img/icon-shirt.svg' %}
+				</span>
+				Shop Merch <span class="srOnly">opens in a new window</span>
+			</a>
+			<a
+				class="btn"
+				href="https://order.spinellispizzeria.com/"
+				target="_blank"
+			>
+				<span class="btn__icon">
+					{% include 'img/icon-pizza.svg' %}
+				</span>
+				Order Online <span class="srOnly">opens in a new window</span>
+			</a>
+		</div>
+	</div>
 </header>
-      
+
 {% include 'mobile-nav.html' %}

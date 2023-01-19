@@ -1,74 +1,72 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .merch {
+	&__text {
+		max-width: 56rem;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
 
-  &__text {
-    max-width: 56rem;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+		h2 {
+			margin-bottom: 0;
+		}
+	}
 
-    h2 {
-      margin-bottom: 0;
-    }
-  }
+	&__gallery {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: visible;
+		margin-top: var(--space-2xl);
+		width: 100%;
+		// margin-left: calc(-1 * var(--space-l));
 
-  &__gallery {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: visible;
-    margin-top: var(--space-2xl);
-    // width: 100%;
-    // margin-left: calc(-1 * var(--space-l));
+		@include min(lg) {
+			flex-wrap: nowrap;
+			// width: calc(100% + var(--space-l));
+		}
 
-    @include min(lg) {
-      flex-wrap: nowrap;
-      width: calc(100% + var(--space-l));
-    }
+		img {
+			position: relative;
+			overflow: hidden;
+			width: 50%;
+			height: auto;
+			object-fit: cover;
+			filter: drop-shadow(0.5rem 0.5rem 1rem black);
+			box-shadow: 0.5rem 0.5rem 1rem black;
 
-    img {
-      position: relative;
-      overflow: hidden;
-      width: 50%;
-      height: auto;
-      object-fit: cover;
-      filter: drop-shadow(.5rem .5rem 1rem black);
-      box-shadow: .5rem .5rem 1rem black;
+			@include min(lg) {
+				flex: 1;
+			}
 
-      @include min(lg) {
-        flex: 1;
-      }
+			&:first-child {
+				z-index: 4;
+				top: 2rem;
+				// transform: translateY(2rem);
+			}
 
-      &:first-child {
-        z-index: 4;
-        top: 2rem;
-        // transform: translateY(2rem);
-      }
+			&:nth-child(2) {
+				z-index: 3;
 
-      &:nth-child(2) {
-        z-index: 3;
+				@include min(lg) {
+					top: -2rem;
+					// transform: translateY(-2rem);
+				}
+			}
 
-        @include min(lg) {
-          top: -2rem;
-          // transform: translateY(-2rem);
-        }
-      }
+			&:nth-child(3) {
+				z-index: 2;
 
-      &:nth-child(3) {
-        z-index: 2;
+				@include min(lg) {
+					// transform: translateY(4rem);
+					top: 4rem;
+				}
+			}
 
-        @include min(lg) {
-          // transform: translateY(4rem);
-          top: 4rem;
-        }
-      }
-
-      &:last-child {
-        z-index: 1;
-        top: -2rem;
-        // transform: translateY(-1rem);
-      }
-    }
-  }
-
+			&:last-child {
+				z-index: 1;
+				top: -2rem;
+				// transform: translateY(-1rem);
+			}
+		}
+	}
 }

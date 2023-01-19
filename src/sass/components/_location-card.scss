@@ -1,117 +1,136 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .locationCard {
-  background-color: var(--black);
-  color: white;
-  padding: var(--space-xl-3xl);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	background-color: var(--black);
+	color: white;
+	padding: var(--space-xl-3xl);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-  @include min(lg) {
-    // padding: 4vw 2vw;
+	@include min(lg) {
+		// padding: 4vw 2vw;
 
-    &:hover {
-      .locationCard__bg {
-        filter: blur(3px);
-        opacity: .6;
-      }
+		&:hover {
+			.locationCard__bg {
+				filter: blur(3px);
+				opacity: 0.6;
+			}
 
-      .btnGroup {
-        transform: scale(1.1);
-      }
-    }
-  }
+			.btnGroup {
+				transform: scale(1.1);
+			}
+		}
+	}
 
-  &--fullWidth {
-    grid-column: 1 / -1;
-  }
+	&--fullWidth {
+		grid-column: 1 / -1;
+	}
 
-  &__name {
-    margin-bottom: 0;
+	&__name {
+		margin-bottom: 0;
 
-    a {
-      text-decoration: none;
+		a {
+			text-decoration: none;
 
-      &:hover,
-      &:focus {
-        color: var(--white);
-      }
+			&:hover,
+			&:focus {
+				color: var(--white);
+			}
 
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-    }
-  }
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
 
-  &__content {
-    transition: var(--transition);
-  }
+	&__content {
+		transition: var(--transition);
+	}
 
-  &__cityState {
-    font-size: var(--font-size-3);
-    margin-bottom: var(--space-l);
-    color: darken(white, 25%);
-    font-family: var(--font-normal);
-    font-weight: normal;
-    text-transform: none;
-    font-style: italic;
-  }
+	&__cityState {
+		font-size: var(--font-size-3);
+		margin-bottom: var(--space-l);
+		color: darken(white, 25%);
+		font-family: var(--font-normal);
+		font-weight: normal;
+		text-transform: none;
+		font-style: italic;
+	}
 
-  &__hours {
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
+	&__directions {
+		margin-top: 1em;
 
-  &__hours,
-  .btnGroup {
-    position: relative;
-    z-index: 2;
-  }
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: var(--space-3xs);
 
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: var(--transition);
-    width: 100%;
-    height: 100%;
-  }
+			svg {
+				height: 1em;
+				width: 1em;
+			}
+		}
+	}
 
-  &__bgImg {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+	&__hours {
+		// margin-top: 1rem;
+		margin-bottom: 0;
+	}
 
-  .btnGroup {
-    transition: var(--transition);
-  }
+	&__hoursHeading {
+		margin-bottom: 0;
+	}
+
+	&__hours,
+	.btnGroup {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: var(--transition);
+		width: 100%;
+		height: 100%;
+	}
+
+	&__bgImg {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+
+	.btnGroup {
+		transition: var(--transition);
+	}
 }
 
 @media (min-width: 1090px) {
-  article {
-
-    &:hover,
-    &:focus {
-      .bg {
-        filter: blur(3px);
-        opacity: .8;
-        transform: scale(1.2);
-      }
-    }
-  }
+	article {
+		&:hover,
+		&:focus {
+			.bg {
+				filter: blur(3px);
+				opacity: 0.8;
+				transform: scale(1.2);
+			}
+		}
+	}
 }
