@@ -1,73 +1,73 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .hero {
-  padding-top: 15rem;
-  padding-bottom: 10rem;
-  position: relative;
+	// padding-top: 15rem;
+	padding-bottom: 10rem;
+	position: relative;
 
-  @media (min-width: 1090px) {
-    padding-top: 20rem;
-  }
+	@media (min-width: 1090px) {
+		// padding-top: 20rem;
+	}
 
-  &__content {
-    position: relative;
-    z-index: 2;
-  }
+	&__content {
+		position: relative;
+		z-index: 2;
+	}
 
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: var(--transition);
-    width: 100%;
-    height: 100%;
-  }
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: var(--transition);
+		width: 100%;
+		height: 100%;
+	}
 
-  &__bgImg {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+	&__bgImg {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 // Locations
 .hero--locations {
-  text-align: center;
-  padding-top: 12rem;
+	text-align: center;
+	padding-top: 12rem;
 
-  @include min(lg) {
-    padding-top: 15rem;
-  }
+	@include min(lg) {
+		padding-top: 15rem;
+	}
 
-  .hero__content {
-    display: inline-block;
-    position: relative;
-    position: relative;
+	.hero__content {
+		display: inline-block;
+		position: relative;
+		position: relative;
 
-    @include min(md) {
-      padding: var(--space-2xl);
-    }
-  }
+		@include min(md) {
+			padding: var(--space-2xl);
+		}
+	}
 
-  &__bg {
-    display: none;
+	&__bg {
+		display: none;
 
-    @include min(md) {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      animation: flicker 1s infinite alternate;
-      fill: transparent;
-      border: .5rem solid var(--red);
-    }
-  }
+		@include min(md) {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			animation: flicker 1s infinite alternate;
+			fill: transparent;
+			border: 0.5rem solid var(--red);
+		}
+	}
 
-  p {
-    max-width: 55ch;
-    margin-inline: auto;
-  }
+	p {
+		max-width: 55ch;
+		margin-inline: auto;
+	}
 }

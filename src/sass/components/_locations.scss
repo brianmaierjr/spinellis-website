@@ -17,7 +17,6 @@
 
 	.locationCard {
 		margin-bottom: var(--space-l);
-		// grid-column: 1 / -1;
 
 		@include min(lg) {
 			margin-bottom: 0;
@@ -25,7 +24,6 @@
 
 		&:first-child {
 			@include min(lg) {
-				aspect-ratio: 16/5;
 				grid-column: 1 / -1;
 			}
 		}

@@ -1,18 +1,21 @@
 @use "../abstracts" as *;
 
 .siteHeader {
-	position: absolute;
-	top: 0;
-	left: 0;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
 	width: 100%;
 	z-index: 4;
+	background-color: var(--black);
+	background-image: url(/assets/img/grunge-white.png);
+	background-image: url(/assets/img/grunge-white.webp);
 
 	@include min(lg) {
 		padding: var(--space-l);
 	}
 
 	@include max(lg) {
-		padding-top: 3rem;
+		// padding-top: 3rem;
 	}
 
 	&__logo {
@@ -22,21 +25,17 @@
 		@include min(lg) {
 			width: 10em;
 		}
-
-		img {
-			display: none;
-
-			&.active {
-				display: block;
-			}
-		}
 	}
 
 	&__mobileOrderBtn {
 		width: 100%;
 		position: fixed;
-		top: 0;
+		z-index: 10;
+		bottom: 0;
 		left: 0;
+		margin-bottom: 0;
+		height: 4rem;
+		font-size: var(--font-size-2);
 
 		@include min(lg) {
 			display: none;
@@ -172,5 +171,15 @@
 		transform: translateY(2rem);
 		padding-top: var(--space-2xs);
 		transition: 0.2s all ease-in-out;
+	}
+}
+
+.animatedLogo {
+	img {
+		display: none;
+
+		&.active {
+			display: block;
+		}
 	}
 }

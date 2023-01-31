@@ -1,10 +1,11 @@
 <footer class="footer siteFooter">
 	<a class="siteFooter__logo" href="/">
 		<img
-			src="{{ '/assets/img/logo.svg' | url }}"
-			alt="Spinellis Pizeria"
-			width="151"
-			height="54"
+			class="logo1 active"
+			src="/assets/img/logo/logo1.svg"
+			alt="Spinellis Pizzeria Homepage"
+			width="960"
+			height="560"
 		/>
 	</a>
 
@@ -35,9 +36,7 @@
 					<span class="srOnly">opens in a new window</span></a
 				>
 			</li>
-			L {% comment %}
 		</ul>
-		{% endcomment %}
 	</nav>
 
 	<p class="siteFooter__copyright">
@@ -58,19 +57,17 @@
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.min.js"></script>
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
 
-{% comment %} GSAP {% endcomment %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="{{ '/assets/js/gsap-home.js' | url }}"></script>
 
-{% comment %}
-<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<!-- <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script>
 	MicroModal.init();
-</script>
-{% endcomment %}
+</script> -->
 
-<!-- Only use on pages that need it -->
-{% comment %} {% if page.url == "/media/" or page.url contains "/location/" %}
+<!-- Only use on pages that need it
+{% if page.url == "/media/" or page.url contains "/location/" %}
 <script src="{{ '/assets/js/tobii.min.js' | url }}"></script>
 <script>
 	const tobii = new Tobii({
@@ -78,7 +75,7 @@
 		captions: false,
 	});
 </script>
-{% endif %} {% endcomment %}
+{% endif %} -->
 
 <!-- Logo Animation -->
 <script>
