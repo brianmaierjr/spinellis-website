@@ -1,8 +1,43 @@
 <footer class="footer siteFooter">
-	<a class="siteFooter__logo" href="/">
+	<a class="siteFooter__logo animatedLogo" href="/">
 		<img
 			class="logo1 active"
 			src="/assets/img/logo/logo1.svg"
+			alt="Spinellis Pizzeria Homepage"
+			width="960"
+			height="560"
+		/>
+		<img
+			class="logo2"
+			src="/assets/img/logo/logo2.svg"
+			alt="Spinellis Pizzeria Homepage"
+			width="960"
+			height="560"
+		/>
+		<img
+			class="logo3"
+			src="/assets/img/logo/logo3.svg"
+			alt="Spinellis Pizzeria Homepage"
+			width="960"
+			height="560"
+		/>
+		<img
+			class="logo4"
+			src="/assets/img/logo/logo4.svg"
+			alt="Spinellis Pizzeria Homepage"
+			width="960"
+			height="560"
+		/>
+		<img
+			class="logo5"
+			src="/assets/img/logo/logo5.svg"
+			alt="Spinellis Pizzeria Homepage"
+			width="960"
+			height="560"
+		/>
+		<img
+			class="logo6"
+			src="/assets/img/logo/logo6.svg"
 			alt="Spinellis Pizzeria Homepage"
 			width="960"
 			height="560"
@@ -12,7 +47,7 @@
 	<nav class="siteFooter__nav" aria-label="Main Navigation">
 		<ul class="siteFooter__list">
 			<li><a href="/">Home</a></li>
-			<li><a href="#locations">Locations</a></li>
+			<li><a href="/#locations">Locations</a></li>
 			{% comment %}
 			<li>
 				<a href="javascript:;" data-micromodal-trigger="modal-menu"
@@ -22,9 +57,7 @@
 			{% endcomment %}
 			<!-- <li><a href="/about/">About</a></li> -->
 			<li><a href="/contact/">Contact</a></li>
-			{% comment %}
-			<li><a href="/media/">Media</a></li>
-			{% endcomment %}
+			<!-- <li><a href="/media/">Media</a></li> -->
 			<li>
 				<a href="https://spinellispizza.bigcartel.com/" target="_blank"
 					>Merch <span class="srOnly">opens in a new window</span></a
@@ -56,26 +89,9 @@
 <script src="https://unpkg.com/tabbable/dist/index.umd.min.js"></script>
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.min.js"></script>
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 <script src="{{ '/assets/js/gsap-home.js' | url }}"></script>
-
-<!-- <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-<script>
-	MicroModal.init();
-</script> -->
-
-<!-- Only use on pages that need it
-{% if page.url == "/media/" or page.url contains "/location/" %}
-<script src="{{ '/assets/js/tobii.min.js' | url }}"></script>
-<script>
-	const tobii = new Tobii({
-		counter: false,
-		captions: false,
-	});
-</script>
-{% endif %} -->
 
 <!-- Logo Animation -->
 <script>
@@ -83,24 +99,23 @@
 	if (mediaQuery.matches) {
 		// Do nothing
 	} else {
-		var tid = setInterval(mycode, 400);
-		function mycode() {
-			const currentLogo = document.querySelector(
-				".siteHeader__logo img.active"
-			);
-			const nextLogo = document.querySelector(
-				".siteHeader__logo img.active + img"
+		var tid = setInterval(animateLogo, 400);
+		function animateLogo() {
+			const animatedLogos = document.querySelectorAll(
+				".animatedLogo img.active"
 			);
 
-			if (!nextLogo) {
-				document
-					.querySelector(".siteHeader__logo img:first-child")
-					.classList.add("active");
-				currentLogo.classList.remove("active");
-			} else {
-				nextLogo.classList.add("active");
-				currentLogo.classList.remove("active");
-			}
+			animatedLogos.forEach((logo) => {
+				if (!logo.nextElementSibling) {
+					logo.parentElement
+						.querySelector("img:first-child")
+						.classList.add("active");
+					logo.classList.remove("active");
+				} else {
+					logo.nextElementSibling.classList.add("active");
+					logo.classList.remove("active");
+				}
+			});
 		}
 		function abortTimer() {
 			// to be called when you want to stop the timer
