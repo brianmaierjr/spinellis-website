@@ -55,9 +55,7 @@
 				>
 			</li>
 			{% endcomment %}
-			<!-- <li><a href="/about/">About</a></li> -->
 			<li><a href="/contact/">Contact</a></li>
-			<!-- <li><a href="/media/">Media</a></li> -->
 			<li>
 				<a href="https://spinellispizza.bigcartel.com/" target="_blank"
 					>Merch <span class="srOnly">opens in a new window</span></a
@@ -91,13 +89,16 @@
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-<script src="{{ '/assets/js/gsap-home.js' | url }}"></script>
+<!-- <script src="{{ '/assets/js/gsap-home.js' | url }}"></script> -->
 
 <!-- Logo Animation -->
 <script>
 	const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 	if (mediaQuery.matches) {
 		// Do nothing
+		video = document.getElementById("hero__video");
+		video.pause();
+		video.setAttribute("controls", "controls");
 	} else {
 		var tid = setInterval(animateLogo, 400);
 		function animateLogo() {

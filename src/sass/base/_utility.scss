@@ -1,45 +1,49 @@
 .mobile-only {
-  @media (min-width: 768px) {
-    display: none;
-  }
+	@media (min-width: 768px) {
+		display: none;
+	}
 }
 
 .color-red {
-  color: var(--red);
+	color: var(--red);
 }
 
 .align-center {
-  text-align: center;
+	text-align: center;
 }
 
 .grungeBg {
-  background-color: var(--white);
-  background-image: url(/assets/img/grunge-black.png);
-  background-image: url(/assets/img/grunge-black.webp);
-  color: var(--black);
+	background-color: var(--white);
+	background-image: url(/assets/img/grunge-black.png);
+	background-image: url(/assets/img/grunge-black.webp);
+	color: var(--black);
 }
 
 .grungeBg--dark {
-  background-color: var(--black);
-  background-image: url(/assets/img/grunge-white.png);
-  background-image: url(/assets/img/grunge-white.webp);
-  color: var(--white);
+	background-color: var(--black);
+	background-image: url(/assets/img/grunge-white.png);
+	background-image: url(/assets/img/grunge-white.webp);
+	color: var(--white);
 }
 
 // Screen Reader Only Text
 .srOnly {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  word-wrap: normal !important;
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
 }
 
 .noScroll {
-  overflow-y: hidden;
+	overflow-y: hidden;
+}
+
+.hidden {
+	visibility: hidden;
 }
