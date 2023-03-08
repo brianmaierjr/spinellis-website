@@ -1,23 +1,24 @@
 ---
-layout: 'default.liquid'
+layout: "default.liquid"
 title: Spinellis Pizzeria
-bodyClass: 'locationsPage'
+bodyClass: "locationsPage"
 ---
 
 <div class="hero hero--locations grungeBg--dark">
-  <div class="wrapper">
-    <div class="hero__content">
-      <h1>Locations</h1>
-      <p>Serving 3 states, including Kentucky, Tennesee, and Arizona. Select your location below to learn more.</p>
-      <svg class="hero--locations__bg" width="100%" height="100%">
-        <rect width="100%" height="100%" />
-      </svg>
-    </div>
-  </div>
+	<div class="wrapper">
+		<div class="hero__content">
+			<h1>Locations</h1>
+			<p>
+				3 convenient locations in the Louisville Metro Area. Visit us
+				today or order online for delivery/pickup.
+			</p>
+			<svg class="hero--locations__bg" width="100%" height="100%">
+				<rect width="100%" height="100%" />
+			</svg>
+		</div>
+	</div>
 </div>
 
 <section class="locations grungeSection">
-  <div class="wrapper">
-    {% include 'locations-list.html' %}
-  </div>
+	<div class="wrapper">{% include 'locations-list.html' %}</div>
 </section>

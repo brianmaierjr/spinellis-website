@@ -1,13 +1,8 @@
 @use "../abstracts" as *;
 
 .hero {
-	// padding-top: 15rem;
 	padding-bottom: 10rem;
 	position: relative;
-
-	@media (min-width: 1090px) {
-		// padding-top: 20rem;
-	}
 
 	&__content {
 		position: relative;
@@ -34,11 +29,11 @@
 // Locations
 .hero--locations {
 	text-align: center;
-	padding-top: 12rem;
+	padding-top: 5rem;
 
-	@include min(lg) {
-		padding-top: 15rem;
-	}
+	// @include min(lg) {
+	// 	padding-top: 15rem;
+	// }
 
 	.hero__content {
 		display: inline-block;
@@ -56,6 +51,7 @@
 		@include min(md) {
 			display: block;
 			position: absolute;
+			border-radius: 1em;
 			top: 0;
 			left: 0;
 			width: 100%;

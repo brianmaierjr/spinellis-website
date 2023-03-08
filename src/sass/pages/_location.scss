@@ -1,94 +1,91 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .locationPage {
+	.hero {
+		text-align: center;
 
-  .hero {
-    text-align: center;
-    padding-bottom: 15rem;
+		@include min(md) {
+			padding-bottom: 20rem;
+			padding-bottom: 15rem;
+		}
 
-    @include min(md) {
-      padding-bottom: 20rem;
-    }
+		h1 {
+			margin-bottom: 0;
+		}
 
-    h1 {
-      margin-bottom: 0;
-    }
+		&__bg {
+			opacity: 0.5;
+		}
 
-    &__bg {
-      opacity: .5;
-    }
-
-    h2 {
-      margin-bottom: var(--space-l);
-      color: darken(white, 50%);
-    }
-  }
-
+		h2 {
+			margin-bottom: var(--space-l);
+			color: darken(white, 50%);
+		}
+	}
 }
 
 .locationInfo {
-  background-color: black;
-  color: var(--white);
-  padding: var(--space-xl);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-l);
-  transform: translateY(-6rem);
-  width: min(100% - var(--space-l-2xl), 80rem);
+	background-color: black;
+	color: var(--white);
+	padding: var(--space-xl);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-l);
+	transform: translateY(-6rem);
+	width: min(100% - var(--space-l-2xl), 80rem);
 
-  @include min(md) {
-    transform: translateY(-50%);
-  }
+	@include min(md) {
+		transform: translateY(-50%);
+	}
 
-  &__heading {
-    // color: var(--red);
-    font-family: var(--font-condensed);
-    text-transform: uppercase;
-  }
+	&__heading {
+		// color: var(--red);
+		font-family: var(--font-condensed);
+		text-transform: uppercase;
+	}
 
-  &__item {
-    flex: 1;
-    margin-bottom: 0 !important;
-  }
+	&__item {
+		flex: 1;
+		margin-bottom: 0 !important;
+	}
 
-  &__socialLink {
-    text-decoration: none;
-    display: inline-block;
-    padding-right: var(--space-3xs);
+	&__socialLink {
+		text-decoration: none;
+		display: inline-block;
+		padding-right: var(--space-3xs);
 
-    &:hover,
-    &:focus {
-      svg>* {
-        fill: darken(white, 20%);
-      }
-    }
-  }
+		&:hover,
+		&:focus {
+			svg > * {
+				fill: darken(white, 20%);
+			}
+		}
+	}
 }
 
 .locationGallery {
-  padding-bottom: var(--space-xl);
+	padding-bottom: var(--space-xl);
 }
 
 .locationGallery__grid,
 .grid-photos {
+	@include min(md) {
+		display: grid;
+		gap: var(--space-l);
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		max-width: 100%;
+	}
 
-  @include min(md) {
-    display: grid;
-    gap: var(--space-l);
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    max-width: 100%;
-  }
+	@include min(lg) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 
-  @include min(lg) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+	img {
+		width: 100%;
 
-  img {
-    width: 100%;
-
-    @include max(md) {
-      margin-bottom: var(--space-s);
-    }
-  }
+		@include max(md) {
+			margin-bottom: var(--space-s);
+		}
+	}
 }
