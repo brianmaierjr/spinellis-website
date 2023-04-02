@@ -11,7 +11,7 @@
 		@include min(lg) {
 			display: grid !important;
 			grid-template-columns: 1fr 1fr;
-			gap: var(--space-l);
+			gap: var(--space-xl);
 		}
 	}
 
