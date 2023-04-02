@@ -1,164 +1,130 @@
+.modal {
+	z-index: -1;
+	visibility: hidden;
+	position: fixed;
+	transition: all ease-in-out 0.3s;
+
+	&.active {
+		z-index: 99;
+		visibility: visible;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100vh;
+		width: 100vw;
+
+		.modal__overlay {
+			opacity: 1;
+		}
+
+		.modal__container {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+.modalTrigger {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
 .modal__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: all ease-in-out 0.3s;
 }
 
 .modal__container {
-  background-color: #fff;
-  background-image: url(/assets/img/grunge-black.png);
-  background-image: url(/assets/img/grunge-black.webp);
-  padding: var(--space-l);
-  // min-width: 30rem;
-  max-width: 40rem;
-  max-height: 90vh;
-  overflow-y: auto;
+	background-color: #fff;
+	background-image: url(/assets/img/grunge-black.png);
+	background-image: url(/assets/img/grunge-black.webp);
+	padding: var(--space-l);
+	max-width: 40rem;
+	max-height: 90vh;
+	overflow-y: auto;
+	opacity: 0;
+	transform: translateY(10rem);
+	transition: all ease-in-out 0.3s;
+	transition-delay: 0.15s;
 }
 
 .modal__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 1rem;
 }
 
 .modal__title {
-  color: var(--red);
-  margin-top: 0;
-  margin-bottom: 0;
+	color: var(--red);
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .modal__close {
-  background: transparent;
-  border: 0;
+	background: transparent;
+	border: 0;
 
-  &:hover {
-    cursor: pointer;
-  }
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .modal__header .modal__close:before {
-  content: "\2715";
-  color: var(--black);
-  font-size: var(--font-size-4);
+	content: "\2715";
+	color: var(--black);
+	font-size: var(--font-size-4);
 }
 
 .modal__content {
-  margin-block: var(--space-l);
-}
-
-
-@keyframes mmfadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes mmfadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes mmslideIn {
-  from {
-    transform: translateY(15%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes mmslideOut {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(-10%);
-  }
-}
-
-.micromodal-slide {
-  display: none;
-}
-
-.micromodal-slide.is-open {
-  display: block;
-  position: relative;
-  z-index: 10;
-}
-
-.micromodal-slide[aria-hidden="false"] .modal__overlay {
-  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-
-.micromodal-slide[aria-hidden="false"] .modal__container {
-  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
-}
-
-.micromodal-slide[aria-hidden="true"] .modal__overlay {
-  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-
-.micromodal-slide[aria-hidden="true"] .modal__container {
-  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
-}
-
-.micromodal-slide .modal__container,
-.micromodal-slide .modal__overlay {
-  will-change: transform;
+	margin-block: var(--space-l);
 }
 
 // Menu Modal
 
 .modal-menu__list {
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	padding: 0;
 
-  a {
-    color: var(--white);
-    text-decoration: none;
-    background-color: var(--black);
-    padding: var(--space-s);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	a {
+		color: var(--white);
+		text-decoration: none;
+		background-color: var(--black);
+		padding: var(--space-s);
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-    &:hover,
-    &:focus {
-      background-color: var(--red);
+		&:hover,
+		&:focus {
+			background-color: var(--red);
 
-      svg {
-        transform: translateX(-.5em);
-      }
-    }
+			svg {
+				transform: translateX(-0.5em);
+			}
+		}
 
-    svg {
-      height: 1em;
-      width: auto;
-      fill: currentColor;
-      transition: .2s all ease-in-out;
+		svg {
+			height: 1em;
+			width: auto;
+			fill: currentColor;
+			transition: 0.2s all ease-in-out;
 
-      * {
-        fill: currentColor;
-      }
-    }
-  }
+			* {
+				fill: currentColor;
+			}
+		}
+	}
 }

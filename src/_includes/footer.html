@@ -56,7 +56,7 @@
 				>
 			</li>
 			<li>
-				<buton data-micromodal-trigger="modal-order"
+				<buton data-modal="modal-order" class="modalTrigger"
 					>ORDER ONLINE
 					<span class="srOnly">opens in a new window</span></buton
 				>
@@ -76,47 +76,5 @@
 
 <script src="https://unpkg.com/tabbable/dist/index.umd.min.js"></script>
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.min.js"></script>
-<script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
+<script src="{{ '/assets/js/scripts.js' | url }}"></script>
 <script src="{{ '/assets/js/modal.js' | url }}"></script>
-
-<script>
-	// Get the current year
-	document.getElementById("current-year").innerHTML =
-		new Date().getFullYear();
-
-	// Logo Animation
-	const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-	if (mediaQuery.matches) {
-		// Do nothing
-		video = document.getElementById("hero__video");
-		video.pause();
-		video.setAttribute("controls", "controls");
-	} else {
-		var tid = setInterval(animateLogo, 400);
-		function animateLogo() {
-			const animatedLogos = document.querySelectorAll(
-				".animatedLogo img.active"
-			);
-
-			animatedLogos.forEach((logo) => {
-				if (!logo.nextElementSibling) {
-					logo.parentElement
-						.querySelector("img:first-child")
-						.classList.add("active");
-					logo.classList.remove("active");
-				} else {
-					logo.nextElementSibling.classList.add("active");
-					logo.classList.remove("active");
-				}
-			});
-		}
-		function abortTimer() {
-			// to be called when you want to stop the timer
-			clearInterval(tid);
-		}
-	}
-</script>
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> -->
-<!-- <script src="{{ '/assets/js/gsap-home.js' | url }}"></script> -->

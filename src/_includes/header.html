@@ -1,7 +1,7 @@
 <header class="siteHeader">
 	<button
-		class="siteHeader__mobileOrderBtn btn"
-		data-micromodal-trigger="modal-order"
+		class="siteHeader__mobileOrderBtn btn modalTrigger"
+		data-modal="modal-order"
 	>
 		<span class="btn__icon"> {% include 'img/icon-pizza.svg' %} </span>
 		Order Online
@@ -103,7 +103,7 @@
 				</span>
 				Shop Merch <span class="srOnly">opens in a new window</span>
 			</a>
-			<button data-micromodal-trigger="modal-order" class="btn">
+			<button data-modal="modal-order" class="btn modalTrigger">
 				<span class="btn__icon">
 					{% include 'img/icon-pizza.svg' %}
 				</span>

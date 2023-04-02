@@ -1,3 +1,39 @@
+// Get the current year in Footer
+document.getElementById("current-year").innerHTML = new Date().getFullYear();
+
+// Logo Animation
+const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+if (mediaQuery.matches) {
+	// Do nothing
+	video = document.getElementById("hero__video");
+	video.pause();
+	video.setAttribute("controls", "controls");
+} else {
+	var tid = setInterval(animateLogo, 400);
+	function animateLogo() {
+		const animatedLogos = document.querySelectorAll(
+			".animatedLogo img.active"
+		);
+
+		animatedLogos.forEach((logo) => {
+			if (!logo.nextElementSibling) {
+				logo.parentElement
+					.querySelector("img:first-child")
+					.classList.add("active");
+				logo.classList.remove("active");
+			} else {
+				logo.nextElementSibling.classList.add("active");
+				logo.classList.remove("active");
+			}
+		});
+	}
+	function abortTimer() {
+		// to be called when you want to stop the timer
+		clearInterval(tid);
+	}
+}
+
+// Mobile Navigation
 const menuTrigger = document.querySelector(".siteHeader__mobileNavTrigger");
 const menuCloseTrigger = document.querySelector(".mobileNav__close");
 const mobileNav = document.querySelector("#mobileNav");

@@ -1,40 +1,43 @@
-const modalTrigger = document.querySelector(".,modalTrigger");
-const modalCloseTrigger = document.querySelector(".modalTrigger__close");
-const modalContainer = document.querySelector(".modal__container");
+const modals = document.querySelectorAll(".modalTrigger");
 
-// Listen to Open and Close Triggers
-modalTrigger.addEventListener("click", openMenu);
-modalCloseTrigger.addEventListener("click", closeMenu);
+modals.forEach((modal) => {
+	const modalTrigger = modal;
+	const modalContainerId = modalTrigger.dataset.modal;
+	const modalContainer = document.getElementById(modalContainerId);
+	const modalOverlay = modalContainer.querySelector(".modal__overlay");
+	const modalCloseTrigger = modalContainer.querySelector(
+		".modalTrigger__close"
+	);
 
-// Open Menu
-// Add Active Class, Add aria attr, Add noScroll to body
-function openModal() {
-	container.classList.add("active");
-	modalTrigger.setAttribute("aria-expanded", "true");
-	document.querySelector("body").classList.add("noScroll");
-}
+	// Listen to Open and Close Triggers
+	modalTrigger.addEventListener("click", openModal);
+	modalCloseTrigger.addEventListener("click", closeModal);
 
-// Close
-// Romove Active Class, Remove aria attr, Remove noScroll to body
-function closeMenu() {
-	container.classList.remove("active");
-	modalTrigger.setAttribute("aria-expanded", "false");
-	document.querySelector("body").classList.remove("noScroll");
-}
+	// Open Menu
+	// Add Active Class, Add aria attr, Add noScroll to body
+	function openModal() {
+		modalContainer.classList.add("active");
+		document.querySelector("body").classList.add("noScroll");
+	}
 
-// Set Focus Trap on Mobile Menu w/ Fallback
-const trap = focusTrap.createFocusTrap(container, {
-	onActivate: () => openModal(),
-	onDeactivate: () => closeModal(),
-	fallbackFocus: modalContainer,
+	// Close
+	// Romove Active Class, Remove aria attr, Remove noScroll to body
+	function closeModal() {
+		modalContainer.classList.remove("active");
+		document.querySelector("body").classList.remove("noScroll");
+	}
+
+	// Set Focus Trap on Mobile Menu w/ Fallback
+	const trap = focusTrap.createFocusTrap(modalContainer, {
+		onActivate: () => openModal(),
+		onDeactivate: () => closeModal(),
+		fallbackFocus: modalContainer,
+	});
+
+	// On Click activate focus trap
+	modalTrigger.addEventListener("click", trap.activate);
+
+	// On Click deactivate focus trap
+	modalCloseTrigger.addEventListener("click", trap.deactivate);
+	modalOverlay.addEventListener("click", trap.deactivate);
 });
-
-// On Click activate focus trap
-document
-	.getElementById("modalTrigger")
-	.addEventListener("click", trap.activate);
-
-// On Click deactivate focus trap
-document
-	.getElementById("modalCloseTrigger")
-	.addEventListener("click", trap.deactivate);

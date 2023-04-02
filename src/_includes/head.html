@@ -10,8 +10,12 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="The best pizza in Louisville. Period."">
 	<title>{{ title }}</title>
+	{% if description %}
+	<meta name="description" content="{{ description }}" />
+	{% else %}
+	<meta name="description" content="The best pizza in Louisville. Period." />
+	{% endif %}
 	<link
 		rel="apple-touch-icon"
 		sizes="180x180"

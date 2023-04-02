@@ -75,6 +75,14 @@
 				text-decoration: underline;
 			}
 		}
+
+		.modalTrigger {
+			&:hover,
+			&:focus {
+				color: var(--white);
+				text-decoration: underline;
+			}
+		}
 	}
 }
 
