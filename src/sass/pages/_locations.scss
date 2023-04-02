@@ -4,9 +4,9 @@
 		padding-bottom: var(--space-2xl);
 	}
 
-	@media (max-width: 1089px) {
-		.hero {
-			padding-block: 4rem;
+	.hero {
+		h1 {
+			margin-bottom: 0.2em;
 		}
 	}
 }

@@ -11,7 +11,7 @@
 	.join-us-form {
 		grid-column: 1 / -1;
 
-		@media (min-width: 768px) {
+		@media (min-width: 600px) {
 			grid-column: 3 / -3;
 		}
 

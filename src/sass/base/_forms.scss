@@ -37,13 +37,13 @@ form {
 		flex: 1;
 		min-width: 100%;
 
-		&.half-input {
+		&:has(div) {
 			@include min(md) {
-				min-width: calc(50% - 1rem);
-				max-width: calc(50% - 1rem);
+				display: flex;
+				gap: 1.5em;
 
-				&:nth-child(odd) {
-					margin-right: 2rem;
+				div {
+					flex: 1;
 				}
 			}
 		}
