@@ -1,12 +1,11 @@
 <header class="siteHeader">
-	<a
+	<button
 		class="siteHeader__mobileOrderBtn btn"
-		href="https://order.spinellispizzeria.com/"
-		target="_blank"
+		data-micromodal-trigger="modal-order"
 	>
 		<span class="btn__icon"> {% include 'img/icon-pizza.svg' %} </span>
 		Order Online
-	</a>
+	</button>
 	<div class="siteHeader__wrapper wrapper">
 		<a class="siteHeader__logo animatedLogo" href="/">
 			<img
@@ -86,6 +85,11 @@
 						><span>Contact</span></a
 					>
 				</li>
+				<li class="siteHeader__mainNavItem">
+					<a class="main-nav__link" href="/jobs/" data-replace="Jobs"
+						><span>Jobs</span></a
+					>
+				</li>
 			</ul>
 		</nav>
 		<div class="btnGroup">
@@ -99,16 +103,12 @@
 				</span>
 				Shop Merch <span class="srOnly">opens in a new window</span>
 			</a>
-			<a
-				class="btn"
-				href="https://order.spinellispizzeria.com/"
-				target="_blank"
-			>
+			<button data-micromodal-trigger="modal-order" class="btn">
 				<span class="btn__icon">
 					{% include 'img/icon-pizza.svg' %}
 				</span>
 				Order Online <span class="srOnly">opens in a new window</span>
-			</a>
+			</button>
 		</div>
 	</div>
 </header>

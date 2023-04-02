@@ -48,13 +48,6 @@
 		<ul class="siteFooter__list">
 			<li><a href="/">Home</a></li>
 			<li><a href="/locations">Locations</a></li>
-			{% comment %}
-			<li>
-				<a href="javascript:;" data-micromodal-trigger="modal-menu"
-					>Menu</a
-				>
-			</li>
-			{% endcomment %}
 			<li><a href="/contact/">Contact</a></li>
 			<li>
 				<a href="https://spinellispizza.bigcartel.com/" target="_blank"
@@ -62,9 +55,9 @@
 				>
 			</li>
 			<li>
-				<a href="https://order.spinellispizzeria.com/" target="_blank"
+				<buton data-micromodal-trigger="modal-order"
 					>Order Online
-					<span class="srOnly">opens in a new window</span></a
+					<span class="srOnly">opens in a new window</span></buton
 				>
 			</li>
 		</ul>
@@ -80,19 +73,17 @@
 	</p>
 </footer>
 
-<script>
-	document.getElementById("current-year").innerHTML =
-		new Date().getFullYear();
-</script>
 <script src="https://unpkg.com/tabbable/dist/index.umd.min.js"></script>
 <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.min.js"></script>
 <script src="{{ '/assets/js/mobile-nav.js' | url }}"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> -->
-<!-- <script src="{{ '/assets/js/gsap-home.js' | url }}"></script> -->
+<script src="{{ '/assets/js/modal.js' | url }}"></script>
 
-<!-- Logo Animation -->
 <script>
+	// Get the current year
+	document.getElementById("current-year").innerHTML =
+		new Date().getFullYear();
+
+	// Logo Animation
 	const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 	if (mediaQuery.matches) {
 		// Do nothing
@@ -124,3 +115,7 @@
 		}
 	}
 </script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script> -->
+<!-- <script src="{{ '/assets/js/gsap-home.js' | url }}"></script> -->

@@ -1,0 +1,25 @@
+.jobsPage {
+	.hero {
+		background-color: var(--black);
+		background-image: url(/assets/img/grunge-white.png);
+		background-image: url(/assets/img/grunge-white.webp);
+		text-align: center;
+		padding-block: 5em;
+
+		@media (min-width: 768px) {
+			padding-block: 8em;
+		}
+
+		h1 {
+			margin-bottom: 0.2em;
+		}
+	}
+
+	.join-us-form {
+		grid-column: 1 / -1;
+
+		@media (min-width: 768px) {
+			grid-column: 4 / -4;
+		}
+	}
+}

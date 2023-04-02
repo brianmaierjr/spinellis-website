@@ -60,28 +60,6 @@
 		}
 	}
 
-	form {
-		display: flex;
-		flex-wrap: wrap;
-		/* gap: 1rem; */
-
-		> div {
-			flex: 1;
-			min-width: 100%;
-
-			&.half-input {
-				@include min(md) {
-					min-width: calc(50% - 1rem);
-					max-width: calc(50% - 1rem);
-
-					&:first-of-type {
-						margin-right: 2rem;
-					}
-				}
-			}
-		}
-	}
-
 	.siteFooter {
 		&:before {
 			content: "";

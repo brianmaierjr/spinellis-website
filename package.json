@@ -23,6 +23,7 @@
 	},
 	"dependencies": {
 		"focus-trap": "^6.9.4",
-		"gsap": "^3.11.4"
+		"gsap": "^3.11.4",
+		"micromodal": "^0.4.10"
 	}
 }

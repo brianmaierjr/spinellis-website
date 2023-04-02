@@ -1,0 +1,104 @@
+---
+layout: "default.liquid"
+title: Join Our Team
+bodyClass: "jobsPage"
+---
+
+<section class="hero hero--contact">
+	<div class="hero-text">
+		<h1>{{ title }}</h1>
+		<p>Join our team by filling out the form below.</p>
+	</div>
+</section>
+
+<section
+	class="contact-us grungeSection grungeSection--dark grungeSection--bottomOnly"
+>
+	<div class="wrapper">
+		<div class="grid-16">
+			<div class="join-us-form">
+				<form name="jobs" method="POST" data-netlify="true" netlify>
+					<div class="half-input">
+						<label for="first-name">First Name</label><br />
+						<input
+							type="text"
+							name="first-name"
+							id="first-name"
+							required
+						/><br />
+					</div>
+					<div class="half-input">
+						<label for="last-name">Last Name</label><br />
+						<input
+							type="text"
+							name="last-name"
+							id="last-name"
+							required
+						/><br />
+					</div>
+					<div class="half-input">
+						<label for="email">Email Address</label><br />
+						<input
+							type="email"
+							name="email"
+							id="email"
+							required
+						/><br />
+					</div>
+					<div class="half-input">
+						<label for="phone">Phone Number</label><br />
+						<input
+							type="tel"
+							name="phone"
+							id="phone"
+							required
+						/><br />
+					</div>
+					<div>
+						<label for="position">Position</label><br />
+						<select name="position" id="position" required>
+							<option value="manager">Manager</option>
+							<option value="kitchen">Kitchen</option>
+							<option value="front-of-house">
+								Front of House
+							</option>
+							<option value="driver">
+								Delivery Driver
+							</option></select
+						><br />
+					</div>
+					<div>
+						<label for="availability">Availability</label><br />
+						<textarea
+							name="availability"
+							id="availability"
+							cols="30"
+							rows="5"
+							required
+						></textarea>
+					</div>
+					<div>
+						<label for="salary">Salary Desired</label><br />
+						<input
+							type="text"
+							name="salary"
+							id="salary"
+							required
+						/><br />
+					</div>
+					<div>
+						<label for="experience">Experience</label><br />
+						<textarea
+							name="experience"
+							id="experience"
+							cols="30"
+							rows="10"
+							required
+						></textarea>
+					</div>
+					<input class="btn" type="submit" value="Message Us" />
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

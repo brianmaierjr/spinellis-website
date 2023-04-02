@@ -1,26 +1,51 @@
+@use "../abstracts" as *;
+
 input,
-textarea {
-  background-color: rgba(255, 255, 255, .2);
-  border: none;
-  outline: 0;
-  padding: var(--space-xs);
-  color: var(--white);
-  width: 100%;
-  margin-bottom: var(--space-s);
-  transition: .2s all ease-in-out;
+textarea,
+select {
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+	outline: 0;
+	padding: var(--space-xs);
+	color: var(--white);
+	width: 100%;
+	margin-bottom: var(--space-s);
+	transition: 0.2s all ease-in-out;
 
-  &:hover {
-    background-color: rgba(255, 255, 255, .4);
-  }
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.4);
+	}
 
-  &:focus {
-    background-color: rgba(255, 255, 255, 1);
-    color: var(--black);
-  }
+	&:focus {
+		background-color: rgba(255, 255, 255, 1);
+		color: var(--black);
+	}
 
-  &[type=submit] {
-    width: auto;
-    margin-left: auto;
-    appearance: none;
-  }
+	&[type="submit"] {
+		width: auto;
+		margin-left: auto;
+		appearance: none;
+	}
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	/* gap: 1rem; */
+
+	> div {
+		flex: 1;
+		min-width: 100%;
+
+		&.half-input {
+			@include min(md) {
+				min-width: calc(50% - 1rem);
+				max-width: calc(50% - 1rem);
+
+				&:nth-child(odd) {
+					margin-right: 2rem;
+				}
+			}
+		}
+	}
 }
