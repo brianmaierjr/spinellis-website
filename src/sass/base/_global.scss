@@ -1,8 +1,10 @@
 :root {
-	background-color: var(--charcoal, black);
 	color: var(--white);
 	font-family: "Barlow", sans-serif;
 	font-size: 100%;
+	background-color: var(--black);
+	background-image: url(/assets/img/grunge-white.png);
+	background-image: url(/assets/img/grunge-white.webp);
 }
 
 /**

@@ -6,9 +6,6 @@
 	// left: 0;
 	width: 100%;
 	z-index: 4;
-	background-color: var(--black);
-	background-image: url(/assets/img/grunge-white.png);
-	background-image: url(/assets/img/grunge-white.webp);
 
 	@include min(lg) {
 		padding: var(--space-l);

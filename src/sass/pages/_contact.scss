@@ -1,9 +1,6 @@
 @use "../abstracts" as *;
 
 .contactPage {
-	background-color: var(--black);
-	background-image: url(/assets/img/grunge-white.png);
-	background-image: url(/assets/img/grunge-white.webp);
 	color: var(--white);
 
 	input[type="submit"] {
@@ -76,6 +73,14 @@
 			background-image: url(/assets/border-black-top.svg);
 			background-position: top;
 			z-index: 2;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.contact-us {
+			&-location {
+				flex: 1;
+			}
 		}
 	}
 

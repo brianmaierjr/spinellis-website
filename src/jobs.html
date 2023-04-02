@@ -54,7 +54,7 @@ bodyClass: "jobsPage"
 							required
 						/><br />
 					</div>
-					<div>
+					<div class="half-input">
 						<label for="position">Position</label><br />
 						<select name="position" id="position" required>
 							<option value="manager">Manager</option>
@@ -67,6 +67,15 @@ bodyClass: "jobsPage"
 							</option></select
 						><br />
 					</div>
+					<div class="half-input">
+						<label for="salary">Salary Desired</label><br />
+						<input
+							type="text"
+							name="salary"
+							id="salary"
+							required
+						/><br />
+					</div>
 					<div>
 						<label for="availability">Availability</label><br />
 						<textarea
@@ -78,15 +87,6 @@ bodyClass: "jobsPage"
 						></textarea>
 					</div>
 					<div>
-						<label for="salary">Salary Desired</label><br />
-						<input
-							type="text"
-							name="salary"
-							id="salary"
-							required
-						/><br />
-					</div>
-					<div>
 						<label for="experience">Experience</label><br />
 						<textarea
 							name="experience"
@@ -96,7 +96,11 @@ bodyClass: "jobsPage"
 							required
 						></textarea>
 					</div>
-					<input class="btn" type="submit" value="Message Us" />
+					<input
+						class="btn"
+						type="submit"
+						value="Submit Application"
+					/>
 				</form>
 			</div>
 		</div>
