@@ -30,6 +30,11 @@
 			height: 130%;
 			width: auto;
 			z-index: -1;
+			display: none;
+
+			@include min(md) {
+				display: block;
+			}
 		}
 
 		h1 {
