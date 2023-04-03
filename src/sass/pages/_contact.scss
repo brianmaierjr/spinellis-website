@@ -17,6 +17,10 @@
 		padding-left: 2rem;
 		padding-right: 2rem;
 
+		@include min(md) {
+			padding-bottom: 8em;
+		}
+
 		&-text {
 			position: relative;
 		}
@@ -50,6 +54,7 @@
 		grid-column: 1/-1;
 		position: relative;
 		z-index: 3;
+		padding-bottom: 5em;
 
 		&-locations {
 			grid-column: 2 / span 3;

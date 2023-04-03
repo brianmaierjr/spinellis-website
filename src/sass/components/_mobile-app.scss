@@ -43,32 +43,46 @@
 	&__phone,
 	&__content {
 		grid-column: 1 / -1;
-		padding-left: var(--space-l);
-		padding-right: var(--space-l);
 		text-align: center;
+
+		@include min(md) {
+			padding-left: var(--space-l);
+			padding-right: var(--space-l);
+		}
 	}
 
 	&__phone {
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: var(--space-l);
 		height: 20rem;
 		width: 100%;
 		height: auto;
-		max-width: 25rem;
+		max-width: 30rem;
 
 		@include min(lg) {
+			max-width: 25rem;
 			grid-column: 3 / span 4;
 			max-width: 100%;
 			padding-left: 0;
 			padding-right: 0;
 		}
 
-		img {
+		&Img {
 			width: 100%;
+			display: none;
 
-			@include max(lg) {
-				max-width: 15rem;
-				margin-inline: auto;
+			@include min(lg) {
+				display: block;
+			}
+
+			&--mobile {
+				display: block;
+				width: 100vw;
+
+				@include min(lg) {
+					display: none;
+				}
 			}
 		}
 	}
