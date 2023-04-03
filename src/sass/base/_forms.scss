@@ -28,6 +28,16 @@ select {
 	}
 }
 
+select {
+	-webkit-appearance: none;
+	appearance: none;
+	background-image: url(/assets/img/caret-down-white.svg);
+	background-repeat: no-repeat;
+	background-position: calc(100% - 0.5em) center;
+	background-size: 1.5em auto;
+	padding-right: 2.5em;
+}
+
 form {
 	display: flex;
 	flex-wrap: wrap;
