@@ -77,6 +77,11 @@
 		}
 
 		.modalTrigger {
+			background-color: transparent;
+			color: var(--white);
+			border: none;
+			outline: 0;
+
 			&:hover,
 			&:focus {
 				color: var(--white);
