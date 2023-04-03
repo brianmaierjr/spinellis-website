@@ -1,9 +1,12 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .grid-16 {
 	display: grid;
 	grid-template-columns: repeat(16, 1fr);
-	gap: var(--space-m);
+
+	@include min(md) {
+		gap: var(--space-m);
+	}
 }
 
 // Wrapper
@@ -42,13 +45,13 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			z-index: 1;
-			transition: .2s all ease-in-out;
+			transition: 0.2s all ease-in-out;
 		}
 
 		&:hover,
 		&:focus {
 			img {
-				opacity: .4;
+				opacity: 0.4;
 			}
 		}
 
@@ -56,7 +59,7 @@
 			display: block;
 			width: 100%;
 			height: auto;
-			transition: .2s all ease-in-out;
+			transition: 0.2s all ease-in-out;
 			margin-bottom: 0 !important;
 		}
 	}
@@ -85,14 +88,14 @@
 	}
 
 	.wrapper {
-		*:not(.locationGallery):not(.grid-photos):not(.grid-videos):not(.bodyText__hero) {
+		*:not(.locationGallery):not(.grid-photos):not(.grid-videos):not(
+				.bodyText__hero
+			) {
 			max-width: 44rem;
-			;
 			margin-inline: auto;
 		}
 
 		> {
-
 			div,
 			video,
 			img,

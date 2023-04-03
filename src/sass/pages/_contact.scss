@@ -18,12 +18,18 @@
 		padding-right: 2rem;
 
 		&-text {
-			background-image: url(/assets/img/neon-phone.svg);
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			padding-top: 2rem;
-			padding-bottom: 2rem;
+			position: relative;
+		}
+
+		&--contact__bg {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			animation: flicker 1s infinite alternate;
+			height: 130%;
+			width: auto;
+			z-index: -1;
 		}
 
 		h1 {
@@ -37,8 +43,6 @@
 
 	.contact-us {
 		grid-column: 1/-1;
-		padding-left: 2rem;
-		padding-right: 2rem;
 		position: relative;
 		z-index: 3;
 
