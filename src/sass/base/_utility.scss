@@ -51,3 +51,7 @@
 .w-full {
 	width: 100%;
 }
+
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
+}

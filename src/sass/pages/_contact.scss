@@ -7,49 +7,6 @@
 		margin-left: auto;
 	}
 
-	.hero {
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding-block: 5em;
-		padding-left: 2rem;
-		padding-right: 2rem;
-
-		@include min(md) {
-			padding-bottom: 8em;
-		}
-
-		&-text {
-			position: relative;
-		}
-
-		&--contact__bg {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			animation: flicker 1s infinite alternate;
-			height: 130%;
-			width: auto;
-			z-index: -1;
-			display: none;
-
-			@include min(md) {
-				display: block;
-			}
-		}
-
-		h1 {
-			margin-bottom: 0.2em;
-		}
-
-		p {
-			max-width: 55ch;
-		}
-	}
-
 	.contact-us {
 		grid-column: 1/-1;
 		position: relative;

@@ -2,10 +2,12 @@
 
 .hero--home {
 	padding-bottom: 4rem;
+	padding-inline: 0;
+	padding-top: 0;
 	position: relative;
 
 	@include min(lg) {
-		// padding-top: 15rem;
+		padding-top: 4rem;
 	}
 
 	.hero__wrapper {
@@ -32,6 +34,7 @@
 		grid-column-end: -1;
 		grid-row: 2;
 		padding: var(--space-s);
+		text-align: left;
 		// margin-top: calc(var(--space-2xl) * -1);
 		// margin-left: var(--space-l);
 		// margin-right: var(--space-l);
