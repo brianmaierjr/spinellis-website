@@ -38,12 +38,50 @@
 	margin-bottom: var(--space-2xl);
 }
 
+// .grungeSection__top,
+// .grungeSection__bottom,
+// .grungeBorder__top,
+// .grungeBorder__bottom {
+// 	&:before,
+// 	&:after {
+// 		content: "";
+// 		position: absolute;
+// 		left: 0;
+// 		width: 100%;
+// 		height: 4rem;
+// 		display: block;
+// 		background-repeat: no-repeat;
+// 		background-size: 101% auto;
+// 		z-index: 1;
+// 		background-size: 100% 100%;
+
+// 		@include min(lg) {
+// 			height: 6rem;
+// 		}
+
+// 		@include min(xxl) {
+// 			height: 8rem;
+// 		}
+// 	}
+// }
+
 .grungeSection__top,
+.grungeBorder__top {
+	&--dark {
+		&:before {
+			background-image: url(/assets/img/border-black-top.svg);
+		}
+	}
+}
+
 .grungeSection__bottom,
-.grungeBorder__top,
 .grungeBorder__bottom {
-	&:before,
+	position: relative;
+
 	&:after {
+		top: calc(100% - 1px);
+		background-image: url(/assets/img/border-white-bottom.svg);
+		background-position: top;
 		content: "";
 		position: absolute;
 		left: 0;
@@ -63,6 +101,12 @@
 			height: 8rem;
 		}
 	}
+
+	&--dark {
+		&:after {
+			background-image: url(/assets/img/border-black-bottom.svg);
+		}
+	}
 }
 
 .grungeSection__top,
@@ -72,29 +116,30 @@
 	&:before {
 		bottom: calc(100% - 1px);
 		background-image: url(/assets/img/border-white-top.svg);
-		background-position: bottom;
+		background-position: top;
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 4rem;
+		display: block;
+		background-repeat: no-repeat;
+		background-size: 101% auto;
+		z-index: 1;
+		background-size: 100% 100%;
+
+		@include min(lg) {
+			height: 6rem;
+		}
+
+		@include min(xxl) {
+			height: 8rem;
+		}
 	}
 
 	&--dark {
 		&:before {
 			background-image: url(/assets/img/border-black-top.svg);
-		}
-	}
-}
-
-.grungeSection__bottom,
-.grungeBorder__bottom {
-	position: relative;
-
-	&:after {
-		top: calc(100% - 1px);
-		background-image: url(/assets/img/border-white-bottom.svg);
-		background-position: top;
-	}
-
-	&--dark {
-		&:after {
-			background-image: url(/assets/img/border-black-bottom.svg);
 		}
 	}
 }
