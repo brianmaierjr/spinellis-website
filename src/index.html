@@ -1,6 +1,20 @@
 ---
 layout: "default.liquid"
 title: Spinellis Pizzeria
+preload: true
+preloadItems:
+    - name: "video"
+      type: "video/mp4"
+      url: "/assets/img/spinellis-teaser-optimized.mp4"
+    - name: "image"
+      type: "image/webp"
+      url: "/assets/img/highlands-bg.webp"
+    - name: "image"
+      type: "image/webp"
+      url: "/assets/img/new-albany-bg.webp"
+    - name: "image"
+      type: "image/webp"
+      url: "/assets/img/st-matthews-bg.webp"
 ---
 
 <section class="hero hero--home">
@@ -25,7 +39,6 @@ title: Spinellis Pizzeria
 				loop
 				muted
 				playsinline
-				preload="none"
 				poster="/assets/img/video-thumb.webp"
 			>
 				<source

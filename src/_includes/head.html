@@ -46,4 +46,12 @@
 		href="{{ '/assets/css/site.css' | url }}"
 		rel="stylesheet"
 	/>
+	{% if preload %} {% for item in preloadItems %}
+	<link
+		rel="preload"
+		as="{{ item.name }}"
+		type="{{ item.type }}"
+		href="{{ item.url }}"
+	/>
+	{% endfor %} {% endif %}
 </head>
