@@ -1,58 +1,57 @@
 .btn {
-  padding: var(--space-2xs)var(--space-s);
-  background-color: var(--red);
-  border: .125rem solid var(--red);
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  text-transform: uppercase;
-  min-width: 150px;
-  text-align: center;
-  display: inline-block;
-  transition: .2s all ease-in-out;
-  margin-right: var(--space-s);
-  margin-bottom: var(--space-s);
-  letter-spacing: .05em;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-1);
-  /* min-width: 15rem; */
+	padding: var(--space-2xs) var(--space-s);
+	background-color: var(--red);
+	border: 0.125rem solid var(--red);
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+	text-transform: uppercase;
+	min-width: 150px;
+	text-align: center;
+	display: inline-block;
+	transition: 0.2s all ease-in-out;
+	margin-bottom: var(--space-s);
+	letter-spacing: 0.05em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--font-size-1);
+	/* min-width: 15rem; */
 
-  &:hover,
-  &:focus {
-    background-color: var(--white);
-    border-color: var(--white);
-    color: var(--red);
-  }
+	&:hover,
+	&:focus {
+		background-color: var(--white);
+		border-color: var(--white);
+		color: var(--red);
+	}
 
-  &.btn--outline {
-    background-color: transparent; 
-    border: 2px solid currentColor;
+	&.btn--outline {
+		background-color: transparent;
+		border: 2px solid currentColor;
 
-    &:hover,
-    &:focus {
-      background-color: var(--white);
-      border-color: var(--white);
-      color: var(--red);
-    }
-  }
+		&:hover,
+		&:focus {
+			background-color: var(--white);
+			border-color: var(--white);
+			color: var(--red);
+		}
+	}
 
-  &__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1em;
-    height: 1em;
-    margin-right: var(--space-2xs);
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 1em;
+		height: 1em;
+		margin-right: var(--space-2xs);
 
-    svg {
-      width: 100%;
-      height: auto;
+		svg {
+			width: 100%;
+			height: auto;
 
-      * {
-        fill: currentColor;
-      }
-    }
-  }
+			* {
+				fill: currentColor;
+			}
+		}
+	}
 }
