@@ -4,8 +4,7 @@
 			class="modal__container"
 			role="dialog"
 			aria-modal="true"
-			aria-labelledby="my-modal-title"
-		>
+			aria-labelledby="my-modal-title">
 			<header class="modal__header">
 				<h2 class="modal__title h4" id="modal-menu-title">
 					Choose Your Location
@@ -13,43 +12,24 @@
 				<button
 					class="modal__close modalTrigger__close"
 					aria-label="Close modal"
-					data-micromodal-close
-				>
+					data-micromodal-close>
 					<span class="srOnly">Close</span>
 				</button>
 			</header>
 			<main class="modal__content" id="modal-menu-content">
 				<ul class="modal-menu__list">
+					{%- for location in collections.location -%}
 					<li>
 						<h3 class="h5">
 							<a
-								href="https://baxteravenue.spinellispizzeria.com/ordering/intro"
+								href="{{ location.data.orderUrl }}"
 								target="_blank"
-								>Highlands &amp; Downtown {% include
+								>{{ location.data.name }} {% include
 								'img/icon-arrow-right.svg' %}</a
 							>
 						</h3>
 					</li>
-					<li>
-						<h3 class="h5">
-							<a
-								href="https://www.toasttab.com/local/order/spinellis-floyd-county-129-west-main-street/r-301edf5f-5f41-4eb2-a9a7-a2f105a98ab8"
-								target="_blank"
-								>New Albany {% include
-								'img/icon-arrow-right.svg' %}</a
-							>
-						</h3>
-					</li>
-					<li>
-						<h3 class="h5">
-							<a
-								href="https://shelbyvilleroad.spinellispizzeria.com/ordering/home"
-								target="_blank"
-								>St. Matthews {% include
-								'img/icon-arrow-right.svg' %}</a
-							>
-						</h3>
-					</li>
+					{%- endfor -%}
 				</ul>
 			</main>
 		</div>

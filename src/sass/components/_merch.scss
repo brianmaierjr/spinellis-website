@@ -1,6 +1,10 @@
 @use "../abstracts" as *;
 
 .merch {
+	&.section {
+		padding-bottom: var(--space-l-4xl);
+	}
+
 	&__text {
 		max-width: 56rem;
 		text-align: center;
