@@ -2,10 +2,7 @@
 	{%- for location in collections.location -%}
 	<article class="locationCard">
 		<div class="locationCard__content">
-			<h2 class="h3 locationCard__name">
-				<!--<a href="{{ location.url }}">{{ location.data.name }}</a>-->
-				{{ location.data.name }}
-			</h2>
+			<h2 class="h3 locationCard__name">{{ location.data.name }}</h2>
 			<h3 class="locationCard__cityState">
 				{{ location.data.cityState }}
 			</h3>
@@ -31,6 +28,9 @@
 				>
 				{% endif %}
 			</div>
+			{% else if location.data.name === 'Food Truck' %}
+			<p>Follow us on instagram to see where we are!</p>
+			<a href="https://www.instagram.com/spinellispizza_" class="btn" target="_ blank">Instagram</a>
 			{% endif %} {% if location.data.directionsUrl %}
 			<p class="locationCard__directions">
 				<a href="{{ location.data.directionsUrl }}" target="_blank">
@@ -39,8 +39,7 @@
 						width="192"
 						height="192"
 						fill="#ffffff"
-						viewBox="0 0 256 256"
-					>
+						viewBox="0 0 256 256">
 						<rect width="256" height="256" fill="none"></rect>
 						<circle
 							cx="128"
@@ -50,16 +49,14 @@
 							stroke="#ffffff"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							stroke-width="16"
-						></circle>
+							stroke-width="16"></circle>
 						<path
 							d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z"
 							fill="none"
 							stroke="#ffffff"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							stroke-width="16"
-						></path>
+							stroke-width="16"></path>
 					</svg>
 					Get Directions<span class="srOnly">
 						to the {{ location.data.name }} Spinellis</span
@@ -75,8 +72,7 @@
 					class="locationCard__bgImg"
 					src="/assets/img/{{ location.data.image }}.webp"
 					alt="{{ location.data.name }}"
-					loading="lazy"
-				/>
+					loading="lazy" />
 			</div>
 		</div>
 	</article>
