@@ -1,54 +1,118 @@
 ---
-layout: 'default.liquid'
+layout: "default.liquid"
 title: Media
-bodyClass: 'mediaPage'
+bodyClass: "mediaPage"
+permalink: false
+eleventyExcludeFromCollections: true
 ---
 
 <section class="hero hero--media">
-  <div class="wrapper">
-    <h1 class="align-center">{{ title }}</h1>
-  </div>
+	<div class="wrapper">
+		<h1 class="align-center">{{ title }}</h1>
+	</div>
 </section>
 
 <section class="bodyText grungeSection">
-  <div class="wrapper">
-    <h2 class="color-red align-center">Videos</h2>
-    <div class="grid-videos">
-      <a data-type="youtube" data-id="HqhpebLz-aU" href="https://www.youtube.com/watch?v=HqhpebLz-aU" class="grid-videos--item lightbox" data-group="videos">
-        <span class="srOnly">Pizza Thrash Pizzacore - Belushi Speed Ball - The Spinelli’s Slam (animated music video)</span>
-        <img src="/assets/img/video-thumb-thrash.jpg" alt="" loading="lazy" width="1360" height="768">
-      </a>
-      <a data-type="youtube" data-id="3o5jYjFlIXU" href="https://www.youtube.com/watch?v=3o5jYjFlIXU" class="grid-videos--item lightbox" data-group="videos">
-        <span class="srOnly">Spinellis Kids</span>
-        <img src="/assets/img/video-thumb-kids.jpg" alt="" loading="lazy" width="1360" height="768">
-      </a>      
-      <a data-type="youtube" data-id="i_MItVNz_n4" href="https://www.youtube.com/watch?v=i_MItVNz_n4" class="grid-videos--item lightbox" data-group="videos">
-        <span class="srOnly">Spinelli's Commercial - Average Joe's</span>
-        <img src="/assets/img/video-thumb-average.jpg" alt="" loading="lazy" width="1360" height="768">
-      </a>         
-      <a data-type="youtube" data-id="vLNGAquFY5Y" href="https://www.youtube.com/watch?v=vLNGAquFY5Y" class="grid-videos--item lightbox" data-group="videos">
-        <span class="srOnly">Spinelli's Pizza - "The Mark Buster Show"</span>
-        <img src="/assets/img/video-thumb-buster.jpg" alt="" loading="lazy" width="1360" height="768">
-      </a>        
-    </div>
+	<div class="wrapper">
+		<h2 class="color-red align-center">Videos</h2>
+		<div class="grid-videos">
+			<a
+				data-type="youtube"
+				data-id="HqhpebLz-aU"
+				href="https://www.youtube.com/watch?v=HqhpebLz-aU"
+				class="grid-videos--item lightbox"
+				data-group="videos">
+				<span class="srOnly"
+					>Pizza Thrash Pizzacore - Belushi Speed Ball - The
+					Spinelli’s Slam (animated music video)</span
+				>
+				<img
+					src="/assets/img/video-thumb-thrash.jpg"
+					alt=""
+					loading="lazy"
+					width="1360"
+					height="768" />
+			</a>
+			<a
+				data-type="youtube"
+				data-id="3o5jYjFlIXU"
+				href="https://www.youtube.com/watch?v=3o5jYjFlIXU"
+				class="grid-videos--item lightbox"
+				data-group="videos">
+				<span class="srOnly">Spinellis Kids</span>
+				<img
+					src="/assets/img/video-thumb-kids.jpg"
+					alt=""
+					loading="lazy"
+					width="1360"
+					height="768" />
+			</a>
+			<a
+				data-type="youtube"
+				data-id="i_MItVNz_n4"
+				href="https://www.youtube.com/watch?v=i_MItVNz_n4"
+				class="grid-videos--item lightbox"
+				data-group="videos">
+				<span class="srOnly"
+					>Spinelli's Commercial - Average Joe's</span
+				>
+				<img
+					src="/assets/img/video-thumb-average.jpg"
+					alt=""
+					loading="lazy"
+					width="1360"
+					height="768" />
+			</a>
+			<a
+				data-type="youtube"
+				data-id="vLNGAquFY5Y"
+				href="https://www.youtube.com/watch?v=vLNGAquFY5Y"
+				class="grid-videos--item lightbox"
+				data-group="videos">
+				<span class="srOnly"
+					>Spinelli's Pizza - "The Mark Buster Show"</span
+				>
+				<img
+					src="/assets/img/video-thumb-buster.jpg"
+					alt=""
+					loading="lazy"
+					width="1360"
+					height="768" />
+			</a>
+		</div>
 
-    <h2 class="color-red align-center">Photos</h2>
-    <div class="grid-photos">
-      <a href="/assets/img/downtown-bg.webp" class="lightbox" data-group="photos">
-        <img src="/assets/img/downtown-bg.webp" alt="Test">
-      </a>
-      <a href="/assets/img/highlands-bg.webp" class="lightbox" data-group="photos">
-        <img src="/assets/img/highlands-bg.webp" alt="Test">
-      </a>
-      <a href="/assets/img/st-matthews-bg.webp" class="lightbox" data-group="photos">
-        <img src="/assets/img/st-matthews-bg.webp" alt="Test">
-      </a>
-      <a href="/assets/img/tempe-bg.webp" class="lightbox" data-group="photos">
-        <img src="/assets/img/tempe-bg.webp" alt="Test">
-      </a>  
-      <a href="/assets/img/tullahoma-bg.webp" class="lightbox" data-group="photos">
-        <img src="/assets/img/tullahoma-bg.webp" alt="Test">
-      </a>                
-    </div>
-  </div>
+		<h2 class="color-red align-center">Photos</h2>
+		<div class="grid-photos">
+			<a
+				href="/assets/img/downtown-bg.webp"
+				class="lightbox"
+				data-group="photos">
+				<img src="/assets/img/downtown-bg.webp" alt="Test" />
+			</a>
+			<a
+				href="/assets/img/highlands-bg.webp"
+				class="lightbox"
+				data-group="photos">
+				<img src="/assets/img/highlands-bg.webp" alt="Test" />
+			</a>
+			<a
+				href="/assets/img/st-matthews-bg.webp"
+				class="lightbox"
+				data-group="photos">
+				<img src="/assets/img/st-matthews-bg.webp" alt="Test" />
+			</a>
+			<a
+				href="/assets/img/tempe-bg.webp"
+				class="lightbox"
+				data-group="photos">
+				<img src="/assets/img/tempe-bg.webp" alt="Test" />
+			</a>
+			<a
+				href="/assets/img/tullahoma-bg.webp"
+				class="lightbox"
+				data-group="photos">
+				<img src="/assets/img/tullahoma-bg.webp" alt="Test" />
+			</a>
+		</div>
+	</div>
 </section>
