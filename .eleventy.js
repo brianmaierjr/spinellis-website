@@ -24,6 +24,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({ "src/fonts": "assets/fonts" });
 	eleventyConfig.addPassthroughCopy({ "src/js": "assets/js" });
 	eleventyConfig.addPassthroughCopy({ "src/favicon": "./" });
+	eleventyConfig.addPassthroughCopy({ "src/robots.txt": "/robots.txt" });
 	eleventyConfig.addLiquidShortcode("image", imageShortcode);
 
 	// eleventyConfig.setBrowserSyncConfig({
