@@ -22,7 +22,6 @@
 		"sass": "^1.49.9"
 	},
 	"dependencies": {
-		"@quasibit/eleventy-plugin-sitemap": "^2.2.0",
 		"focus-trap": "^6.9.4",
 		"gsap": "^3.11.4",
 		"micromodal": "^0.4.10"
