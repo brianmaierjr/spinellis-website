@@ -18,7 +18,8 @@
 			</header>
 			<main class="modal__content" id="modal-menu-content">
 				<ul class="modal-menu__list">
-					{%- for location in collections.location -%}
+					{%- for location in collections.location -%} {% if
+					location.data.excludeFromOrdering == true %} {% else %}
 					<li>
 						<h3 class="h5">
 							<a
@@ -29,7 +30,7 @@
 							>
 						</h3>
 					</li>
-					{%- endfor -%}
+					{% endif %} {%- endfor -%}
 				</ul>
 			</main>
 		</div>
