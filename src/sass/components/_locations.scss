@@ -12,6 +12,10 @@
 			display: grid !important;
 			grid-template-columns: 1fr 1fr;
 			gap: var(--space-xl);
+
+			> *:first-child {
+				grid-column: span 2;
+			}
 		}
 	}
 
