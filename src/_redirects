@@ -1,0 +1,17 @@
+# Redirects from what the browser requests to what we serve
+
+/menu /locations 302
+/the-spinellis-story / 302
+/rewards / 302
+/fts-content/uploads/sites/74/2018/03/spinellis-menu.pdf /locations 302
+/register /locations 302
+/gift-cards / 302
+
+# locations
+
+/store/shelbyville-louisville https://shelbyvilleroad.spinellispizzeria.com/ordering/menu/Pizza 302
+/store/shelbyville-louisville/menu https://shelbyvilleroad.spinellispizzeria.com/ordering/menu/Pizza 302
+/store/baxter-ave-louisville https://order.toasttab.com/online/spinellis-baxter-639-baxter-ave-2 302
+/store/baxter-ave-louisville/menu https://order.toasttab.com/online/spinellis-baxter-639-baxter-ave-2 302
+/store/5th-street-louisville https://order.toasttab.com/online/spinellis-downtown-574-s-4th-st 302
+/store/5th-street-louisville/menu https://order.toasttab.com/online/spinellis-downtown-574-s-4th-st 302
