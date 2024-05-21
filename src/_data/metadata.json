@@ -1,10 +1,10 @@
 {
-  "title": "Spinellis Pizzeria",
-  "url": "https://spinellispizzeria.com/",
-  "description": "The best pizza in Louisville, Arizona, Tennesssee and beyond!",
-  "author": {
-    "name": "Brian Maier Jr.",
-    "email": "brimaidesigns@gmail.com",
-    "url": "https://brianmaierjr.com/"
-  }
+	"title": "Spinellis Pizzeria",
+	"url": "https://spinellispizzeria.com",
+	"description": "The best pizza in Louisville, Arizona, Tennesssee and beyond!",
+	"author": {
+		"name": "Brian Maier Jr.",
+		"email": "brimaidesigns@gmail.com",
+		"url": "https://brianmaierjr.com/"
+	}
 }
