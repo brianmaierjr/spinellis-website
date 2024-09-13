@@ -28,9 +28,15 @@
 				>
 				{% endif %}
 			</div>
-			{% else if location.data.name === 'Food Truck' %}
+
+			{% else %}
 			<p>Follow us on instagram to see where we are!</p>
-			<a href="https://www.instagram.com/spinellispizza_" class="btn" target="_ blank">Instagram</a>
+			<a
+				href="https://www.instagram.com/spinellispizza_"
+				class="btn"
+				target="_ blank"
+				>Instagram</a
+			>
 			{% endif %} {% if location.data.directionsUrl %}
 			<p class="locationCard__directions">
 				<a href="{{ location.data.directionsUrl }}" target="_blank">
