@@ -17,6 +17,10 @@
 	&--fullWidth {
 		width: Min(100%, 125rem);
 	}
+
+	&--slim {
+		width: Min(calc(100% - var(--space-l)), 70rem);
+	}
 }
 
 // Grid
