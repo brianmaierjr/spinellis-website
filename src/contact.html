@@ -53,6 +53,14 @@ bodyClass: "contactPage"
 						>
 					</p>
 					{% endif %}
+					{% if location.data.email %}
+						<a href="mailto:{{ location.data.email }}"
+							><span class="srOnly"
+								>Email Spinellis {{ location.data.name }} at </span
+							>{{ location.data.email }}</a
+						>
+					</p>
+					{% endif %}
 				</div>
 				{%- endfor -%}
 			</div>
